@@ -1,10 +1,11 @@
 import React from 'react'
+import Layout from '../components/Layout/layout'
 
 const cookiePolicy = () => {
   return (
-    <div>
+    <Layout>
       <h1>Cookie Policy</h1>
-    </div>
+    </Layout>
   )
 }
 
