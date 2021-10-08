@@ -9,3 +9,6 @@ const index = () => {
 }
 
 export default index
+
+//Query all jobs 
+//need title and slug
