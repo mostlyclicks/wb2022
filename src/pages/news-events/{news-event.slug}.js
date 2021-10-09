@@ -9,3 +9,7 @@ const NewsEventsPost = () => {
 }
 
 export default NewsEventsPost
+
+
+//News Events Post Template
+//use props slug to get rest of context
