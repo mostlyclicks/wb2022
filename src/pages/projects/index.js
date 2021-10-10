@@ -10,3 +10,5 @@ const index = () => {
 }
 
 export default index
+
+//create index for each category

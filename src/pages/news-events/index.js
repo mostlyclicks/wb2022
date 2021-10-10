@@ -9,3 +9,8 @@ const index = () => {
 }
 
 export default index
+
+
+//get all news and events
+//may need to paginate ... arghhhhh
+//Get slug/Id and title
