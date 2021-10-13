@@ -8,7 +8,6 @@ import { graphql } from 'gatsby'
 const EmploymentOpportunity = ({data}) => {
 
   const job = data.prismicEmploymentOpportunity
-  console.log(job)
 
   return (
     <div>
