@@ -1,5 +1,6 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
+
 
 const Index = ({data}) => {
 
@@ -13,7 +14,7 @@ const Index = ({data}) => {
       {NewsData.map((article) => {
 
         return (
-          <h2>{article.node.data.title.text}</h2>
+          <h2><Link to={article.node.uid}>{article.node.data.title.text}</Link></h2>
         )
       })}
      
@@ -33,6 +34,7 @@ query {
   allPrismicNewsAndEvents {
     edges {
       node {
+        uid
         data {
           title {
             text
