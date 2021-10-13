@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 
 const index = ({data}) => {
@@ -12,7 +12,7 @@ const index = ({data}) => {
       {JobsData.map((job) => {
 
         return (
-          <h2>{job.node.data.title.text}</h2>
+          <h2><Link to={job.node.uid}>{job.node.data.title.text}</Link></h2>
         )
       })}
     </div>
@@ -29,6 +29,7 @@ export const JobData = graphql`
     allPrismicEmploymentOpportunity {
       edges {
         node {
+          uid
           data {
             title {
               text
