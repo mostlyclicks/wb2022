@@ -8,6 +8,10 @@ exports.linkResolver = (doc) => {
     return `/projects/${doc.uid}`
   }
 
+  if (doc.type === 'employment_opportunity') {
+    return `/jobs/${doc.uid}`
+  }
+
 
 
 }

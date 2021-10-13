@@ -31,6 +31,7 @@ export const JobData = graphql`
     allPrismicEmploymentOpportunity {
       edges {
         node {
+          id
           uid
           data {
             title {
