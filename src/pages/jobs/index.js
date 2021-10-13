@@ -9,10 +9,12 @@ const index = ({data}) => {
   return (
     <div>
       <h1>Employment Opportunities Index</h1>
-      {JobsData.map((job) => {
+      {JobsData.map((jobData) => {
+
+        const job = jobData.node
 
         return (
-          <h2><Link to={job.node.uid}>{job.node.data.title.text}</Link></h2>
+          <h2><Link to={job.uid}>{job.data.title.text}</Link></h2>
         )
       })}
     </div>

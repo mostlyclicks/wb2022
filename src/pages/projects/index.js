@@ -12,3 +12,6 @@ const index = () => {
 export default index
 
 //create index for each category
+//Or use a filter in graphql
+
+

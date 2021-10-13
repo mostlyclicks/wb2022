@@ -8,9 +8,12 @@ const Index = ({data}) => {
   return (
     <div>
       <h1>News and Events Index</h1>
-      {NewsData.map((article) => {
+      {NewsData.map((articlePost) => {
+
+        const article = articlePost.node
+
         return (
-          <h2><Link to={article.node.uid}>{article.node.data.title.text}</Link></h2>
+          <h2><Link to={article.uid}>{article.data.title.text}</Link></h2>
         )
       })}
     </div>
