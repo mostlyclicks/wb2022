@@ -4,6 +4,10 @@ exports.linkResolver = (doc) => {
     return `/news-events/${doc.uid}`
   }
 
-  
+  if (doc.type === 'project') {
+    return `/projects/${doc.uid}`
+  }
+
+
 
 }
