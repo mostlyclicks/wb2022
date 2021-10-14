@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-prismic',
       options: {
-        repositoryName: "wb2020",
+        repositoryName: process.env.PROD_GATSBY_PRISMIC_REPO_NAME,
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
         customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
         linkResolver: require('./src/utils/linkResolver').linkResolver,
