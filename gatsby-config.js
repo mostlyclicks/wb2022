@@ -9,10 +9,12 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
       resolve: 'gatsby-source-prismic',
       options: {
-        repositoryName: process.env.PROD_GATSBY_PRISMIC_REPO_NAME,
+        repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
         customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
         linkResolver: require('./src/utils/linkResolver').linkResolver,
@@ -32,8 +34,6 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
