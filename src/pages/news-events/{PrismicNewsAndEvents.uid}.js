@@ -1,16 +1,19 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const NewsEventsPost = ({data}) => {
 
   const article = data.prismicNewsAndEvents
+  const image = getImage(article.data.thumbnail.gatsbyImageData)
 
   return (
     <div>
       <h1>News/Events Template</h1>
       <div>
         {article.data.title.text}
-      </div>
+        <GatsbyImage image={image} alt={article.data.title.text} />
+       </div>
     </div>
   )
 }
@@ -28,6 +31,11 @@ export const query = graphql`
         title {
           text
         }
+        thumbnail {
+            gatsbyImageData(
+              width:200
+            )
+          }
       }
     }
   }
