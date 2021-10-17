@@ -32,10 +32,10 @@ export const query = graphql`
           text
         }
         thumbnail {
-            gatsbyImageData(
-              width:200
-            )
-          }
+          gatsbyImageData(
+            width:200
+          )
+        }
       }
     }
   }
