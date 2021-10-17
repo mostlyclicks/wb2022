@@ -16,7 +16,7 @@ const Index = ({data}) => {
         const image = getImage(article.data.thumbnail.gatsbyImageData)
 
         return (
-          <div>
+          <div key={article.id}>
           <h2><Link to={article.uid}>{article.data.title.text}</Link></h2>
           <GatsbyImage image={image} alt={article.data.title.text} />
           </div>
@@ -32,6 +32,7 @@ export const NewsEventsQuery = graphql`
     allPrismicNewsAndEvents {
       edges {
         node {
+          id
           uid
           data {
             title {
