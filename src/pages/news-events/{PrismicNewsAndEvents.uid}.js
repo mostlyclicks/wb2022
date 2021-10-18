@@ -1,13 +1,13 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { GatsbyImage, getImage, getSrcSet } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 
 const NewsEventsPost = ({data}) => {
 
   const article = data.prismicNewsAndEvents
   const image = getImage(article.data.thumbnail.gatsbyImageData)
-  const imageP = getSrcSet(article.data.thumbnail.fluid.srcSetWebp)
+  
 
   return (
     <div>
@@ -16,7 +16,6 @@ const NewsEventsPost = ({data}) => {
         <h2><Link to="/news-events">Back to News and Events</Link></h2>
         {article.data.title.text}
         <GatsbyImage image={image} alt={article.data.title.text} />
-        <GatsbyImage image={imageP} alt={article.data.title.text} />
        </div>
     </div>
   )

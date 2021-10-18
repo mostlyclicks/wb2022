@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage, getSrcSet } from 'gatsby-plugin-image'
 
 const Index = ({data}) => {
 
@@ -14,11 +14,15 @@ const Index = ({data}) => {
 
         const article = articlePost.node
         const image = getImage(article.data.thumbnail.gatsbyImageData)
+        const imageP = getSrcSet(article.data.thumbnail.fluid.srcSetWebp)
+        
+        
 
         return (
           <div key={article.id}>
           <h2><Link to={article.uid}>{article.data.title.text}</Link></h2>
           <GatsbyImage image={image} alt={article.data.title.text} />
+          <GatsbyImage image={imageP} alt={article.data.title.text} />
           </div>
         )
       })}
@@ -42,6 +46,9 @@ export const NewsEventsQuery = graphql`
               gatsbyImageData(
                 width:200
               )
+              fluid {
+                srcSetWebp
+              }
             }
           }
         }
