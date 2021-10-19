@@ -38,9 +38,6 @@ export const query = graphql`
           gatsbyImageData(
             width:500
           )
-          fluid {
-            srcSetWebp
-          }
         }
       }
     }

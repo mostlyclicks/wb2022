@@ -46,9 +46,6 @@ export const NewsEventsQuery = graphql`
               gatsbyImageData(
                 width:200
               )
-              fluid {
-                srcSetWebp
-              }
             }
           }
         }
