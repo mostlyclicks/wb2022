@@ -36,7 +36,11 @@ export const query = graphql`
         }
         thumbnail {
           gatsbyImageData(
-            width:500
+            layout: FULL_WIDTH
+            placeholder: BLURRED
+            srcSetMaxWidth: 1500
+            
+            
           )
         }
       }

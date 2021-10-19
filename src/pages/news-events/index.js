@@ -14,7 +14,7 @@ const Index = ({data}) => {
 
         const article = articlePost.node
         const image = getImage(article.data.thumbnail.gatsbyImageData)
-        const imageP = getSrcSet(article.data.thumbnail.fluid.srcSetWebp)
+        
         
         
 
@@ -22,7 +22,7 @@ const Index = ({data}) => {
           <div key={article.id}>
           <h2><Link to={article.uid}>{article.data.title.text}</Link></h2>
           <GatsbyImage image={image} alt={article.data.title.text} />
-          <GatsbyImage image={imageP} alt={article.data.title.text} />
+          
           </div>
         )
       })}
