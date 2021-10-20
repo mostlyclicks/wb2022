@@ -39,8 +39,6 @@ export const query = graphql`
             layout: FULL_WIDTH
             placeholder: BLURRED
             srcSetMaxWidth: 1500
-            
-            
           )
         }
       }
