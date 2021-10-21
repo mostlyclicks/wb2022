@@ -36,7 +36,7 @@ export const query = graphql`
         }
         thumbnail {
           gatsbyImageData(
-            layout: FULL_WIDTH
+            width:800
             placeholder: BLURRED
             srcSetMaxWidth: 1500
           )

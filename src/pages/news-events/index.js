@@ -21,7 +21,7 @@ const Index = ({data}) => {
         return (
           <div key={article.id}>
           <h2><Link to={article.uid}>{article.data.title.text}</Link></h2>
-          <GatsbyImage image={image} alt={article.data.title.text} />
+          <Link to={article.uid}><GatsbyImage image={image} alt={article.data.title.text} /></Link>
           
           </div>
         )
