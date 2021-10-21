@@ -12,6 +12,7 @@ const NewsEventsPost = ({data}) => {
   return (
     <div>
       <h1>News/Events Template</h1>
+      
       <div>
         <h2><Link to="/news-events">Back to News and Events</Link></h2>
         {article.data.title.text}
