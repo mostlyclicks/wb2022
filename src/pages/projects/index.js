@@ -15,6 +15,7 @@ const index = ({data}) => {
         return (
           <p>
             <Link to={project.node.uid}>{project.node.data.title.text}</Link>
+            <div>{project.data.body}</div>
           </p>
           
         )
@@ -39,6 +40,16 @@ export const ProjectQuery = graphql`
           data {
             title {
               text
+            }
+            body {
+              ... on PrismicProjectDataBodyImage {
+                id
+                items {
+                  image {
+                    gatsbyImageData(width: 200)
+                  }
+                }
+              }
             }
           }
         }
