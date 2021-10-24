@@ -17,8 +17,8 @@ const index = ({data}) => {
             <Link to={project.node.uid}>{project.node.data.title.text}</Link>
             
             <div>
-            {console.log(project.node.data.body[0].items[0].image.gatsbyImageData.height)}
-            <p>{project.node.data.body[0].items[0].image.gatsbyImageData.height}</p>
+            {console.log(project.node.data.body[0].items[0].image.gatsbyImageData.images.fallback.srcSet)}
+            <p>{project.node.data.body[0].items[0].image.gatsbyImageData.images.fallback.srcSet}</p>
               {/* 
               {project.node.data.body[0].items[0].map(({images}) => {
                 const firstImage = images[0]
