@@ -18,7 +18,7 @@ const index = ({data}) => {
             
             <div>
             {console.log(project.node.data.body[0].items[0].image.gatsbyImageData.images.fallback.srcSet)}
-            <p>{project.node.data.body[0].items[0].image.gatsbyImageData.images.fallback.srcSet}</p>
+            <img src={project.node.data.body[0].items[0].image.gatsbyImageData.images.fallback.srcSet} />
               {/* 
               {project.node.data.body[0].items[0].map(({images}) => {
                 const firstImage = images[0]
