@@ -15,16 +15,21 @@ const index = ({data}) => {
         return (
           <p>
             <Link to={project.node.uid}>{project.node.data.title.text}</Link>
+            
             <div>
-              {project.node.data.body.map(({images}) => {
+            {console.log(project.node.data.body[0].items[0].image.gatsbyImageData.height)}
+            <p>{project.node.data.body[0].items[0].image.gatsbyImageData.height}</p>
+              {/* 
+              {project.node.data.body[0].items[0].map(({images}) => {
                 const firstImage = images[0]
-                console.log(typeof images)
+                
                 return (
                   <div>{firstImage}</div>
                 )
 
               }
               )}
+              */}
             </div>
           </p>
           
