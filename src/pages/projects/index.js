@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+// import { GatsbyImage } from 'gatsby-plugin-image/dist/src/components/gatsby-image.browser'
+import { GatsbyImage, getSrcSet, getSrc } from 'gatsby-plugin-image'
 
 const index = ({data}) => {
 
@@ -12,14 +14,23 @@ const index = ({data}) => {
 
       {projectData.map((project) => {
 
+        //size coming from query
+        const image = project.node.data.body[0].items[0].image.gatsbyImageData.images.fallback.src
+        // const image = project.node.data.body[0].items[0].image.gatsbyImageData.images.fallback.src
+        const images = project.node.data.body[0].items[0].image.gatsbyImageData.images.fallback.srcSet
+
         return (
           <p>
             <Link to={project.node.uid}>{project.node.data.title.text}</Link>
             
             <div>
-            {console.log(project.node.data.body[0].items[0].image.gatsbyImageData.images.fallback.srcSet)}
-            <img src={project.node.data.body[0].items[0].image.gatsbyImageData.images.fallback.src} />
-              {/* 
+            <img src={image} alt={project.node.data.title.text} />
+            <GatsbyImage image={image} alt={project.node.data.title.text} />
+
+
+            {/* 
+            <img src={project.node.data.body[0].items[0].image.gatsbyImageData.images.fallback.src} srcSet={project.node.data.body[0].items[0].image.gatsbyImageData.images.fallback.srcSet} />
+              
               {project.node.data.body[0].items[0].map(({images}) => {
                 const firstImage = images[0]
                 
@@ -61,7 +72,12 @@ export const ProjectQuery = graphql`
                 id
                 items {
                   image {
-                    gatsbyImageData(width: 200)
+                    gatsbyImageData(
+                      width: 200
+                      height: 150
+                      placeholder: BLURRED
+                      
+                    )
                   }
                 }
               }
