@@ -15,7 +15,7 @@ const index = ({data}) => {
       {projectData.map((project) => {
 
         //size coming from query
-        const image = project.node.data.body[0].items[0].image.gatsbyImageData.images.fallback.src
+        const image = project.node.data.body[0].items[0].image.gatsbyImageData
         // const image = project.node.data.body[0].items[0].image.gatsbyImageData.images.fallback.src
         const images = project.node.data.body[0].items[0].image.gatsbyImageData.images.fallback.srcSet
 
@@ -24,11 +24,16 @@ const index = ({data}) => {
             <Link to={project.node.uid}>{project.node.data.title.text}</Link>
             
             <div>
-            <img src={image} alt={project.node.data.title.text} />
-            <GatsbyImage image={image} alt={project.node.data.title.text} />
+            <GatsbyImage image={image} alt="test" />
+            
+            
 
 
             {/* 
+
+            <img src={image} srcSet={images} alt={project.node.data.title.text} />
+
+
             <img src={project.node.data.body[0].items[0].image.gatsbyImageData.images.fallback.src} srcSet={project.node.data.body[0].items[0].image.gatsbyImageData.images.fallback.srcSet} />
               
               {project.node.data.body[0].items[0].map(({images}) => {
@@ -73,10 +78,8 @@ export const ProjectQuery = graphql`
                 items {
                   image {
                     gatsbyImageData(
-                      width: 200
-                      height: 150
+                      width: 300
                       placeholder: BLURRED
-                      
                     )
                   }
                 }
