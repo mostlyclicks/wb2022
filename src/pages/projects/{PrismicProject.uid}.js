@@ -5,8 +5,10 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 const Project = ({data}) => {
 
   const project = data.prismicProject
-  const image = getImage(project.data.body[0].items[0].image.gatsbyImageData.images.fallback.src)
+  // const image = getImage(project.data.body[0].items[0].image.gatsbyImageData.images.fallback.src)
   const alt = project.data.body[0].items[0].image.alt
+  const projectImages = project.data.body[0].items
+  console.log(`project images ${projectImages.count}`)
 
   return (
     <div>
@@ -15,6 +17,12 @@ const Project = ({data}) => {
       <p>{project.data.title.text}</p>
       <p>{project.data.body[0].items[0].image.gatsbyImageData.images.fallback.src}</p>
       <GatsbyImage image={project.data.body[0].items[0].image.gatsbyImageData.images.fallback.src} alt={alt} />
+      {projectImages.map((image) => {
+
+        return (
+          <p>{image.gatsbyImageData.images.fallback.src}</p>
+        )
+      })}
 
     </div>
   )
