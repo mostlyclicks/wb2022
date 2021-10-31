@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-// import { GatsbyImage } from 'gatsby-plugin-image/dist/src/components/gatsby-image.browser'
 import { GatsbyImage, getSrcSet, getSrc } from 'gatsby-plugin-image'
+import Layout from '../../components/Layout/Layout'
 
 const index = ({data}) => {
 
   const projectData = data.allPrismicProject.edges
 
   return (
-    <div>
+    <Layout>
       <h1>Project Index</h1>
       <p>Might do this by category so this is all temp.</p>
 
@@ -52,7 +52,7 @@ const index = ({data}) => {
         )
       })}
 
-    </div>
+    </Layout>
   )
 }
 

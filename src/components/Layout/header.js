@@ -7,7 +7,6 @@ const Header = () => {
   return (
     <div style={{backgroundColor: 'darkgreen', color: 'white'}}>
     <TopNav />
-      Header content / logo / topnav / nav
       <nav>
         <StaticImage src="../../images/wieser-brothers-logo-w.png" alt="Wieser Brothers Logo" />
         <ul>

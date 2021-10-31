@@ -1,13 +1,14 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import Layout from '../../components/Layout/Layout'
 
 const Index = ({data}) => {
 
   const NewsData = data.allPrismicNewsAndEvents.edges
   
   return (
-    <div>
+    <Layout>
       <h1>News and Events Index</h1>
       {NewsData.map((articlePost) => {
 
@@ -24,7 +25,7 @@ const Index = ({data}) => {
           </div>
         )
       })}
-    </div>
+    </Layout>
   )
 }
 export default Index

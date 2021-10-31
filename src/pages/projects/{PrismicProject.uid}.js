@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import Layout from '../../components/Layout/Layout'
 
 const Project = ({data}) => {
 
@@ -12,7 +13,7 @@ const Project = ({data}) => {
   const projectImages = project.data.body[0].items
   
   return (
-    <div>
+    <Layout>
       <h1>Project Template</h1>
       <Link to="/projects">Back to projects</Link>
 
@@ -32,7 +33,7 @@ const Project = ({data}) => {
         )
       })}
 
-    </div>
+    </Layout>
   )
 }
 
