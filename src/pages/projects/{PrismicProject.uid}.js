@@ -24,6 +24,7 @@ const Project = ({data}) => {
       <h1>Project Template</h1>
 
       <p>{project.data.title.text}</p>
+      <GatsbyImage image={project.data.body[0].items[0].image.gatsbyImageData} alt="alt" />
       {/* 
       <p>{project.data.body[0].items[0].image.gatsbyImageData.images.fallback.src}</p>
       <GatsbyImage image={project.data.body[0].items[0].image.gatsbyImageData.images.fallback.src} alt={alt} />
