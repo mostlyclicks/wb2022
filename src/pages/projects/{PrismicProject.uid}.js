@@ -6,22 +6,20 @@ const Project = ({data}) => {
 
   const project = data.prismicProject
   const image = getImage(project.data.body[0].items[0].image.gatsbyImageData)
-  //const image = getSrcSet(project.data.body[0].items[0].image.gatsbyImageData)
   
   const projectImages = project.data.body[0].items
-  console.log(projectImages)
-
   
-
-
   return (
     <div>
       <h1>Project Template</h1>
 
       <p>{project.data.title.text}</p>
-      <GatsbyImage image={project.data.body[0].items[0].image.gatsbyImageData} alt="alt" />
+      {/* 
+        get first single image - not needed
       <GatsbyImage image={image} alt="alt" />
+       */}
 
+      {/* map over all project images */}
       {projectImages.map((img) => {
           const { gatsbyImageData } = img.image
           console.log(gatsbyImageData)
