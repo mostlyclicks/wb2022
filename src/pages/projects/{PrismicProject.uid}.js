@@ -5,24 +5,32 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 const Project = ({data}) => {
 
   const project = data.prismicProject
-  // const image = getImage(project.data.body[0].items[0].image.gatsbyImageData.images.fallback.src)
+  const image = getImage(project.data.body[0].items[0].image.gatsbyImageData.images.fallback.src)
   const alt = project.data.body[0].items[0].image.alt
-  const projectImages = project.data.body[0].items
-  console.log(`project images ${projectImages.count}`)
+  const projectImages = project.data.body[0].items[0]
+  console.log(`project images ${projectImages.length}`)
+  console.log(typeof project.data.body[0].items[0].image.gatsbyImageData.images.fallback)
+  
+  const { images } = project.data.body[0].items[0].image.gatsbyImageData
+  console.log(project.data.body[0].items[0].image.gatsbyImageData)
+  console.log(images)
+  const { srcSet } = images
+  console.log(srcSet)
+  
+
 
   return (
     <div>
       <h1>Project Template</h1>
 
       <p>{project.data.title.text}</p>
+      {/* 
       <p>{project.data.body[0].items[0].image.gatsbyImageData.images.fallback.src}</p>
       <GatsbyImage image={project.data.body[0].items[0].image.gatsbyImageData.images.fallback.src} alt={alt} />
-      {projectImages.map((image) => {
+    
+      <p>{alt}</p>
+      */}
 
-        return (
-          <p>{image.gatsbyImageData.images.fallback.src}</p>
-        )
-      })}
 
     </div>
   )
