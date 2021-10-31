@@ -6,6 +6,7 @@ const Project = ({data}) => {
 
   const project = data.prismicProject
   const image = getImage(project.data.body[0].items[0].image.gatsbyImageData)
+  //const image = getSrcSet(project.data.body[0].items[0].image.gatsbyImageData)
   
   const projectImages = project.data.body[0].items
   console.log(projectImages)
@@ -20,27 +21,15 @@ const Project = ({data}) => {
       <p>{project.data.title.text}</p>
       <GatsbyImage image={project.data.body[0].items[0].image.gatsbyImageData} alt="alt" />
       <GatsbyImage image={image} alt="alt" />
+
       {projectImages.map((img) => {
-          console.log(img)
-          const { image } = img
-          console.log(image)
-          const { gatsbyImageData } = image
+          const { gatsbyImageData } = img.image
           console.log(gatsbyImageData)
         return (
           <p>
           <GatsbyImage image={gatsbyImageData} alt="alt" /></p>
         )
       })}
-      
-
-
-      {/* 
-      <p>{project.data.body[0].items[0].image.gatsbyImageData.images.fallback.src}</p>
-      <GatsbyImage image={project.data.body[0].items[0].image.gatsbyImageData.images.fallback.src} alt={alt} />
-    
-      <p>{alt}</p>
-      */}
-
 
     </div>
   )
