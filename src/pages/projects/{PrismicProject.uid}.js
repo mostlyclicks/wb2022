@@ -6,16 +6,10 @@ const Project = ({data}) => {
 
   const project = data.prismicProject
   const image = getImage(project.data.body[0].items[0].image.gatsbyImageData)
-  const alt = project.data.body[0].items[0].image.alt
-  const projectImages = project.data.body[0].items[0]
-  console.log(`project images ${projectImages.length}`)
-  console.log(typeof project.data.body[0].items[0].image.gatsbyImageData.images.fallback)
   
-  const { images } = project.data.body[0].items[0].image.gatsbyImageData
-  console.log(project.data.body[0].items[0].image.gatsbyImageData)
-  console.log(images)
-  const { srcSet } = images
-  console.log(srcSet)
+  const projectImages = project.data.body[0].items
+  console.log(projectImages)
+
   
 
 
@@ -26,6 +20,20 @@ const Project = ({data}) => {
       <p>{project.data.title.text}</p>
       <GatsbyImage image={project.data.body[0].items[0].image.gatsbyImageData} alt="alt" />
       <GatsbyImage image={image} alt="alt" />
+      {projectImages.map((img) => {
+          console.log(img)
+          const { image } = img
+          console.log(image)
+          const { gatsbyImageData } = image
+          console.log(gatsbyImageData)
+        return (
+          <p>
+          <GatsbyImage image={gatsbyImageData} alt="alt" /></p>
+        )
+      })}
+      
+
+
       {/* 
       <p>{project.data.body[0].items[0].image.gatsbyImageData.images.fallback.src}</p>
       <GatsbyImage image={project.data.body[0].items[0].image.gatsbyImageData.images.fallback.src} alt={alt} />
