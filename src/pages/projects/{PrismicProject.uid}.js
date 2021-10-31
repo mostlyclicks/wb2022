@@ -1,17 +1,20 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const Project = ({data}) => {
 
   const project = data.prismicProject
-  const image = getImage(project.data.body[0].items[0].image.gatsbyImageData)
+
+  //Get single image -- not needed
+  //const image = getImage(project.data.body[0].items[0].image.gatsbyImageData)
   
   const projectImages = project.data.body[0].items
   
   return (
     <div>
       <h1>Project Template</h1>
+      <Link to="/projects">Back to projects</Link>
 
       <p>{project.data.title.text}</p>
       {/* 
