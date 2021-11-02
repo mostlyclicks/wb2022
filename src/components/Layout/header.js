@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div style={{backgroundColor: 'darkgreen', color: 'white'}}>
     <TopNav />
-      <nav>
+      <nav className="flex justify-between">
         <StaticImage src="../../images/wieser-brothers-logo-w.png" alt="Wieser Brothers Logo" />
         <ul>
           <li><Link to="/">Home</Link></li>
