@@ -9,7 +9,7 @@ const Header = () => {
     <TopNav />
       <nav className="flex justify-between">
         <StaticImage src="../../images/wieser-brothers-logo-w.png" alt="Wieser Brothers Logo" />
-        <ul>
+        <ul className="flex flex-row justify-between">
           <li><Link to="/">Home</Link></li>
           <li>Firm</li>
         </ul>
