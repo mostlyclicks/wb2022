@@ -5,7 +5,10 @@ import TopNav from './top-nav'
 
 const Header = () => {
   return (
-    <div style={{backgroundColor: 'darkgreen', color: 'white'}}>
+    <div 
+      style={{backgroundColor: 'darkgreen', color: 'white'}}
+      className="md:container md:mx-auto"
+    >
     <TopNav />
       <nav className="flex justify-between p-8">
         <StaticImage src="../../images/wieser-brothers-logo-w.png" alt="Wieser Brothers Logo" />
