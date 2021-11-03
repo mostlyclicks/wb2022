@@ -2,8 +2,8 @@ import React from 'react'
 
 const TopNav = () => {
   return (
-    <div className="p-3 mb-5" style={{backgroundColor: '#3d3d3d'}}>
-      <ul className="flex justify-end flex-wrap gap-6 ">
+    <div className="px-3 py-1.5 mb-5" style={{backgroundColor: '#3d3d3d'}}>
+      <ul className="flex justify-center md:justify-end flex-wrap gap-6 ">
         <li className="hidden md:block">COVID-19 UPDATE</li>
         <li className="hidden md:block">Careers</li>
         <li>Submit Bids</li>
