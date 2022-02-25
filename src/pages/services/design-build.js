@@ -1,35 +1,32 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql, Link } from "gatsby";
 import { RichText } from "prismic-reactjs";
-import Layout from '../components/Layout/layout'
+import Layout from "../../components/Layout/layout";
 
-const Firm = ({data}) => {
+const DesignBuild = ({data}) => {
 
-  const pageData = data.allPrismicOurFirm.edges[0]
-
+  const pageData = data.allPrismicDesignBuild.edges[0].node.data
 
   return (
     <Layout>
-      <h1>{pageData.node.data.page_title.text}</h1>
+      <h1>{pageData.page_title.text}</h1>
       <main>
-        {RichText.render(pageData.node.data.page_body.raw)}
+        {RichText.render(pageData.page_body.raw)}
       </main>
-      
     </Layout>
-  )
+  );
 }
 
-export default Firm
-
+export default DesignBuild
 
 export const query = graphql`
-  query MyQuery {
-    allPrismicOurFirm {
+  query {
+    allPrismicDesignBuild {
       edges {
         node {
           data {
-            meta_title
             meta_description
+            meta_title
             page_body {
               raw
             }
