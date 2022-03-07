@@ -1,0 +1,148 @@
+{
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "Slug",
+        "placeholder" : "URL Slug"
+      }
+    },
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+        "label" : "URL Slug",
+        "placeholder" : "News/Event Title"
+      }
+    },
+    "date_published" : {
+      "type" : "Date",
+      "config" : {
+        "label" : "Date Published",
+        "placeholder" : "Date Plublished"
+      }
+    },
+    "news_event_short_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
+        "label" : "News/Event Short Description",
+        "placeholder" : "News/Event Short Description"
+      }
+    },
+    "news_event_long_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
+        "label" : "News/Event Long Description",
+        "placeholder" : "News/Event Long Description"
+      }
+    },
+    "thumbnail" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Thumbnail"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "news_event_images" : [ {
+            "name" : "news_and_event_images",
+            "display" : "news and event images"
+          } ],
+          "events" : [ ]
+        },
+        "choices" : {
+          "news_event_images" : {
+            "type" : "Slice",
+            "fieldset" : "Images",
+            "description" : "Images for news or events",
+            "icon" : "burst_mode",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : {
+              "images" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Images"
+                }
+              },
+              "image_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading3",
+                  "label" : "Image Title",
+                  "placeholder" : "Image Title"
+                }
+              },
+              "image_description" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "Image Description",
+                  "placeholder" : "Image Description"
+                }
+              }
+            }
+          },
+          "events" : {
+            "type" : "Slice",
+            "fieldset" : "Event",
+            "description" : "Add event details, time and date",
+            "icon" : "date_range",
+            "display" : "list",
+            "non-repeat" : {
+              "event_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1",
+                  "label" : "Event Title",
+                  "placeholder" : "Event Title"
+                }
+              },
+              "event_description" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
+                  "label" : "Event Description",
+                  "placeholder" : "Event Description"
+                }
+              },
+              "event_date_and_time" : {
+                "type" : "Timestamp",
+                "config" : {
+                  "label" : "Event Date and Time",
+                  "placeholder" : "Add your event date and time"
+                }
+              }
+            },
+            "repeat" : { }
+          }
+        }
+      }
+    }
+  },
+  "SEO" : {
+    "meta_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Meta Title",
+        "placeholder" : "Meta Page Title"
+      }
+    },
+    "meta_description_text" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Meta Description Text",
+        "placeholder" : "Meta Description Text"
+      }
+    }
+  }
+}

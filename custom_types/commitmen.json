@@ -1,0 +1,34 @@
+{
+  "Main" : {
+    "page_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Page Title"
+      }
+    },
+    "page_body" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
+        "label" : "page_body"
+      }
+    }
+  },
+  "SEO" : {
+    "meta_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Meta Title",
+        "placeholder" : "Page Title"
+      }
+    },
+    "meta_description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Meta Description",
+        "placeholder" : "Meta page description"
+      }
+    }
+  }
+}

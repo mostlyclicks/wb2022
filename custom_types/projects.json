@@ -1,0 +1,156 @@
+{
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "Slug",
+        "placeholder" : "URL Slug"
+      }
+    },
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Title",
+        "placeholder" : "Project Title"
+      }
+    },
+    "cat" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Cat",
+        "placeholder" : "Category Field"
+      }
+    },
+    "featured" : {
+      "type" : "Boolean",
+      "config" : {
+        "default_value" : false,
+        "label" : "Is Featured?"
+      }
+    },
+    "category" : {
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "customtypes" : [ "category" ],
+        "label" : "Project Category",
+        "placeholder" : "Set project category"
+      }
+    },
+    "location" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Location",
+        "placeholder" : "Location of Project"
+      }
+    },
+    "short_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
+        "label" : "Short description",
+        "placeholder" : "Project short description"
+      }
+    },
+    "long_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
+        "label" : "Long Description",
+        "placeholder" : "Project long description"
+      }
+    },
+    "project_lead" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "heading3",
+        "label" : "Project Lead",
+        "placeholder" : "Project leader"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "image" : [ {
+            "name" : "image",
+            "display" : "Image"
+          } ],
+          "project_quotes" : [ ]
+        },
+        "choices" : {
+          "image" : {
+            "type" : "Slice",
+            "fieldset" : "Project Images",
+            "description" : "Add project images",
+            "icon" : "burst_mode",
+            "display" : "grid",
+            "non-repeat" : {
+              "gallery_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading3",
+                  "label" : "Gallery Title",
+                  "placeholder" : "Project Gallery Title"
+                }
+              },
+              "project_gallery_description" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
+                  "label" : "Project Gallery Description",
+                  "placeholder" : "Project gallery description"
+                }
+              }
+            },
+            "repeat" : {
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Image"
+                }
+              },
+              "project_image_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Project Image text",
+                  "placeholder" : "Add for captions and alt"
+                }
+              }
+            }
+          },
+          "project_quotes" : {
+            "type" : "Slice",
+            "fieldset" : "Project Quotes",
+            "description" : "Add quote or quotes to project",
+            "icon" : "format_quote",
+            "display" : "grid",
+            "non-repeat" : { },
+            "repeat" : { }
+          }
+        }
+      }
+    }
+  },
+  "SEO" : {
+    "meta_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Meta Title",
+        "placeholder" : "Meta Page title"
+      }
+    },
+    "meta_description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Meta Description",
+        "placeholder" : "Meta Description Text..."
+      }
+    }
+  }
+}
