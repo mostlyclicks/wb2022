@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 
+
 const NewsEventsPost = ({data}) => {
 
   const article = data.prismicNewsAndEvents

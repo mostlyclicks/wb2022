@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, Link } from "gatsby";
 import { RichText } from "prismic-reactjs";
-import Layout from "../../components/Layout/layout";
+import Layout from "../../components/Layout/Layout";
 
 const GeneralContracting = ({data}) => {
 
