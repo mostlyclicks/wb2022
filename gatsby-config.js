@@ -5,7 +5,35 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.wieserbrothers.com",
-    title: "wb2022",
+    title: "Wieser Brothers",
+    description: `Wieser Brothers General Contracting | Design/Build, Project management, General Construction.`,
+    author: `mostlyClicks`,
+    menuLinks: [
+      {
+        name: "Home",
+        link: "/",
+      },
+      {
+        name: "Firm",
+        link: "/firm",
+      },
+      {
+        name: "Services",
+        link: "/services",
+      },
+      {
+        name: "Commitment",
+        link: "/commitment",
+      },
+      {
+        name: "Projects",
+        link: "/projects",
+      },
+      {
+        name: "News & Events",
+        link: "/news-events",
+      },
+    ],
   },
   plugins: [
     "gatsby-plugin-image",
