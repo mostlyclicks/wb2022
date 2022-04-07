@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout/Layout'
 import HeroSection from '../components/Home/hero-section'
+import HomeGrid from "../components/Home/grid-container";
 import styled from "styled-components"
 import HeroBG from "../images/hero_8918-bg3.jpg";
 
@@ -9,7 +10,7 @@ const index = () => {
     <Layout pageTitle="Home">
       <HeroSection />
       <MainSection>
-        <h1>Home</h1>
+        <HomeGrid />
       </MainSection>
     </Layout>
   );
