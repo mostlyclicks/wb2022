@@ -1,19 +1,20 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import { RichText } from "prismic-reactjs";
-import Layout from "../../components/Layout/Layout";
+import L2PagesLayout from "../../components/l2-page-template";
+import bgImage from "../../images/Commitment-FleetFinal-web.jpg";
 
 const ConstructionManagement = ({data}) => {
 
   const pageData = data.allPrismicConstructionManagement.edges[0].node.data
 
   return (
-    <div>
-      <h1>{pageData.page_title.text}</h1>
-      <main>
-        {RichText.render(pageData.page_body.raw)}
-      </main>
-    </div>
+    <L2PagesLayout 
+      title = {pageData.page_title.text}
+      subnav= {`services`}
+      backgroundImage={bgImage}
+      content = {pageData.page_body.raw}
+    />
   );
 }
 

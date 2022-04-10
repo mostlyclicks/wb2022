@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, Link } from "gatsby";
-import Layout from '../components/Layout/Layout'
+import L2PagesLayout from "../components/l2-page-template";
+import bgImage from "../images/WieserBrothers-commitment-DJI_0770.jpg";
 import { RichText } from "prismic-reactjs";
 
 
@@ -10,12 +11,13 @@ const Commitment = ({data}) => {
   console.log(data.allPrismicCommitmen);
 
   return (
-    <Layout>
-      <h1>{pageData.node.data.page_title.text}</h1>
-      <section>
-        {RichText.render(pageData.node.data.page_body.raw)}
-      </section>
-    </Layout>
+
+    <L2PagesLayout 
+      title = {pageData.node.data.page_title.text}
+      subnav = {`commitment`}
+      backgroundImage={bgImage}
+      content = {pageData.node.data.page_body.raw}
+    />
   );
 }
 
