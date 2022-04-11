@@ -5,7 +5,7 @@ import bgImage from "../../images/Group-Photo-2.jpg"
 
 const History = ({data}) => {
   
-  const HistoryData = data.allPrismicHistory.nodes[0];
+  const pageData = data.allPrismicHistory.edges[0].node.data
 
   return (
   <>
@@ -14,7 +14,7 @@ const History = ({data}) => {
 
       backgroundImage = {bgImage}
       subnav={`firm`}
-      content = {HistoryData.data.page_body}
+      content = {pageData.page_body.raw}
  
       />
     </>
@@ -25,15 +25,17 @@ const History = ({data}) => {
 export const HistoryQuery = graphql`
   query HistoryQuery {
     allPrismicHistory {
-      nodes {
-        data {
-          meta_description
-          meta_title
-          page_body {
-            raw
-          }
-          page_title {
-            raw
+      edges {
+        node {
+          data {
+            meta_description
+            meta_title
+            page_body {
+              raw
+            }
+            page_title {
+              raw
+            }
           }
         }
       }

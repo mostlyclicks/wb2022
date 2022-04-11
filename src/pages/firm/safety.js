@@ -6,7 +6,7 @@ import bgImage from "../../images/Framing-Construction.jpg"
 
 const Safety = ({data}) => {
   
-  const SafetyData = data.allPrismicSafety.nodes[0]
+  const pageData = data.allPrismicSafety.edges[0].node.data
   
   return (
   <>
@@ -14,7 +14,7 @@ const Safety = ({data}) => {
       title={`Safety`}
       subnav={`firm`}
       backgroundImage = {bgImage}
-      content = {SafetyData.data.page_body}
+      content = {pageData.page_body.raw}
     />
   </>
   
@@ -24,15 +24,17 @@ const Safety = ({data}) => {
 export const query = graphql`
   query SafetyQuery {
     allPrismicSafety {
-      nodes {
-        data {
-          meta_description
-          meta_title
-          page_body {
-            raw
-          }
-          page_title {
-            raw
+      edges {
+        node {
+          data {
+            meta_description
+            meta_title
+            page_body {
+              raw
+            }
+            page_title {
+              raw
+            }
           }
         }
       }

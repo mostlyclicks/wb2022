@@ -5,7 +5,7 @@ import bgImage from "../../images/Sustainability.jpg"
 
 const Sustainability = ({data}) => {
   
-  const SustainabilityData = data.allPrismicSustainability.nodes[0]
+  const pageData = data.allPrismicSustainability.edges[0].node.data
 
   return (
   <>
@@ -13,7 +13,7 @@ const Sustainability = ({data}) => {
       title= {`Sustainability`}
       subnav={`firm`}
       backgroundImage = {bgImage}
-      content = {SustainabilityData.data.page_body}
+      content = {pageData.page_body.raw}
     
     />
   </>
@@ -24,15 +24,17 @@ const Sustainability = ({data}) => {
 export const query = graphql`
   query SustainabilityQuery {
     allPrismicSustainability {
-      nodes {
-        data {
-          meta_description
-          meta_title
-          page_body {
-            raw
-          }
-          page_title {
-            raw
+      edges {
+        node {
+          data {
+            meta_description
+            meta_title
+            page_body {
+              raw
+            }
+            page_title {
+              raw
+            }
           }
         }
       }

@@ -5,7 +5,7 @@ import bgImage from "../../images/ABC-wi.jpg"
 
 const ProfessionalAffiliations = ({data}) => {
   
-  const ProfAffData = data.allPrismicProfessionalAffiliations.nodes[0];
+  const pageData = data.allPrismicProfessionalAffiliations.edges[0].node.data
   
   return (
   <>
@@ -13,7 +13,7 @@ const ProfessionalAffiliations = ({data}) => {
       title={`Professional Affiliations`}
       subnav={`firm`}
       backgroundImage={bgImage}
-      content = {ProfAffData.data.page_body}
+      content = {pageData.page_body.raw}
     />
   </>
 
@@ -23,15 +23,17 @@ const ProfessionalAffiliations = ({data}) => {
 export const query = graphql`
   query ProfAffQuery {
     allPrismicProfessionalAffiliations {
-      nodes {
-        data {
-          meta_description
-          meta_title
-          page_body {
-            raw
-          }
-          page_title {
-            raw
+      edges {
+        node {
+          data {
+            meta_description
+            meta_title
+            page_body {
+              raw
+            }
+            page_title {
+              raw
+            }
           }
         }
       }

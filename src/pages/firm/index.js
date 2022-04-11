@@ -5,7 +5,7 @@ import bgImage from "../../images/BuildingAerial.jpg"
 
 const OurFirmIndex = ({data}) => {
 
-const OurFirmData = data.allPrismicOurFirm.edges[0]
+const pageData = data.allPrismicOurFirm.edges[0].node.data
 
 return (
   <>
@@ -13,7 +13,7 @@ return (
       title = {`Our Firm`}
       subnav = {`firm`}
       backgroundImage = {bgImage}
-      content = {OurFirmData.node.page_body}      
+      content = {pageData.page_body.raw}      
     />
   </>
 )
