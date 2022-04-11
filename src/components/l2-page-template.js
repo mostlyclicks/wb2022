@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from "gatsby"
+// import { graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "./Layout/Layout"
 import { device } from "./media-queries"
@@ -41,36 +41,9 @@ const L2PagesLayout = props => (
 
 export default L2PagesLayout
 
-{
-  /* 
-export const TestimonialQuery = graphql`
-  query TestimonialQuery {
-    allPrismicTestimonial {
-      edges {
-        node {
-          data {
-            person_quoted {
-              text
-            }
-            testimonial_text {
-              raw
-            }
-            title {
-              raw
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-*/
-}
 
 const ContentWrapper = styled.div`
 
-
-  
 `
 
 const Content = styled.section`

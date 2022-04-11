@@ -1,8 +1,8 @@
 import React from 'react'
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import L2PagesLayout from "../components/l2-page-template";
 import bgImage from "../images/WieserBrothers-commitment-DJI_0770.jpg";
-import { RichText } from "prismic-reactjs";
+// import { RichText } from "prismic-reactjs";
 
 
 const Commitment = ({data}) => {

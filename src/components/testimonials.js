@@ -9,43 +9,36 @@ const RandomTestimonial = () => {
   return (
     <StaticQuery
       query={graphql`
-        query TestimonialListQuery {
+        query QueryTestimonials {
           allPrismicTestimonial {
-            edges {
-              node {
-                data {
-                  person_quoted {
-                    text
-                  }
-                  testimonial_text {
-                    raw
-                  }
-                  title {
-                    raw
-                  }
+            totalCount
+            nodes {
+              data {
+                title {
+                  text
                 }
-                uid
+                testimonial_text {
+                  raw
+                }
               }
             }
-            totalCount
           }
         }
       `}
       render={(data) => {
         const testimonialCount = data.allPrismicTestimonial.totalCount;
-
         const getRandomInt = (max) => {
           return Math.floor(Math.random() * Math.floor(max));
         };
-
-        const singleTestimonial =
-          data.allPrismicTestimonial.edges[getRandomInt(testimonialCount)];
+        const singleTestimonial = data.allPrismicTestimonial.nodes[getRandomInt(testimonialCount)]
 
         return (
           <StyledBlockquote>
-            <p>{RichText.asText(singleTestimonial.node.testimonial_text)}</p>
             <p>
-              <strong>{RichText.asText(singleTestimonial.node.title)}</strong>
+              {RichText.render(singleTestimonial.data.testimonial_text.raw)}
+            </p>
+            <p>
+              <strong>{singleTestimonial.data.title.text}</strong>
             </p>
           </StyledBlockquote>
         );

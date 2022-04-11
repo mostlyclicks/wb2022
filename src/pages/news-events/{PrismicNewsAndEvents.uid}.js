@@ -95,4 +95,4 @@ const NewsMain = styled.div`
   }
 `;
 
-const NewsNav = styled.aside``;
+// const NewsNav = styled.aside``;

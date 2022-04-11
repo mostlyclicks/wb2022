@@ -90,5 +90,17 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Muli\:700,900`,
+          `IBM Plex Serif\:400,700`,
+          `Open Sans\:400,400i,700,700i`,
+          //`source sans pro\:300,400,400i,700` // you can also specify font weights and styles
+        ],
+        display: "swap",
+      },
+    },
   ],
 };

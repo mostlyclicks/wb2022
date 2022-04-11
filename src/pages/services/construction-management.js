@@ -1,6 +1,6 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
-import { RichText } from "prismic-reactjs";
+import { graphql } from "gatsby";
+// import { RichText } from "prismic-reactjs";
 import L2PagesLayout from "../../components/l2-page-template";
 import bgImage from "../../images/Commitment-FleetFinal-web.jpg";
 

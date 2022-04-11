@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { GatsbyImage, getSrcSet, getSrc } from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import Layout from '../../components/Layout/Layout'
 import { device } from "../../components/media-queries";
 import bgImg from "../../images/DJI_0027.jpg";
@@ -10,7 +10,7 @@ import styled from "styled-components";
 const index = ({data}) => {
 
   const projectData = data.allPrismicProject.edges
-  const projectCount = data.allPrismicProject.totalCount
+  // const projectCount = data.allPrismicProject.totalCount
 
   return (
     <Layout>
@@ -28,9 +28,9 @@ const index = ({data}) => {
           {projectData.map((project) => {
             const image =
               project.node.data.body[0].items[0].image.gatsbyImageData;
-            const images =
-              project.node.data.body[0].items[0].image.gatsbyImageData.images
-                .fallback.srcSet;
+            // const images =
+            //   project.node.data.body[0].items[0].image.gatsbyImageData.images
+            //     .fallback.srcSet;
 
             return (
               <ProjectItem>
@@ -180,40 +180,42 @@ const ProjectList = styled.div`
   }
 `;
 
-const L2Navigation = styled.aside`
-  display: flex;
-  flex-direction: column;
 
-  padding-top: 0px;
-  ul {
-    background-color: rgba(0, 0, 0, 0.08);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 40px;
-    li:nth-last-child(1) {
-      border-bottom: none;
-    }
+// const L2Navigation = styled.aside`
+//   display: flex;
+//   flex-direction: column;
 
-    li {
-      border-bottom: 1px solid #ededed;
-      text-decoration: none;
-    }
-    li a {
-      font-family: "Open Sans";
-      color: var(--wbGreenDark);
-      font-weight: 400;
-      display: block;
-      padding: 1rem;
-      text-decoration: none;
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.3);
-        transition: 0.5s;
-        color: #ffffff;
-      }
-    }
-  }
-`;
+//   padding-top: 0px;
+//   ul {
+//     background-color: rgba(0, 0, 0, 0.08);
+//     list-style: none;
+//     margin: 0;
+//     padding: 0;
+//     margin-bottom: 40px;
+//     li:nth-last-child(1) {
+//       border-bottom: none;
+//     }
+
+//     li {
+//       border-bottom: 1px solid #ededed;
+//       text-decoration: none;
+//     }
+//     li a {
+//       font-family: "Open Sans";
+//       color: var(--wbGreenDark);
+//       font-weight: 400;
+//       display: block;
+//       padding: 1rem;
+//       text-decoration: none;
+//       &:hover {
+//         background-color: rgba(0, 0, 0, 0.3);
+//         transition: 0.5s;
+//         color: #ffffff;
+//       }
+//     }
+//   }
+// `;
+
 
 const ProjectItem = styled.div`
   display: grid;

@@ -21,28 +21,29 @@ const Index = ({data}) => {
         </L2MainImage>
       </NewsWrapper>
 
-      <NewsList>
-        {NewsData.map((articlePost) => {
-          const article = articlePost.node;
-          const image = getImage(article.data.thumbnail.gatsbyImageData);
+      <MainContent>
+        <NewsList>
+          {NewsData.map((articlePost) => {
+            const article = articlePost.node;
+            const image = getImage(article.data.thumbnail.gatsbyImageData);
 
-          return (
-            <Item>
-              <Link to={article.url}>
-                <ItemImg>
-                  <GatsbyImage image={image} alt={article.data.title.text} />
-                </ItemImg>
-                <ItemArticle key={article.id}>
-                  <h3>
-                    <Link to={article.url}>{article.data.title.text}</Link>
-                  </h3>
-                  <p>UID {article.uid}</p>
-                </ItemArticle>
-              </Link>
-            </Item>
-          );
-        })}
-      </NewsList>
+            return (
+              <Item>
+                <Link to={article.url}>
+                  <ItemImg>
+                    <GatsbyImage image={image} alt={article.data.title.text} />
+                  </ItemImg>
+                  <ItemArticle key={article.id}>
+                    <h3>
+                      <Link to={article.url}>{article.data.title.text}</Link>
+                    </h3>
+                  </ItemArticle>
+                </Link>
+              </Item>
+            );
+          })}
+        </NewsList>
+      </MainContent>
     </Layout>
   );
 }
@@ -76,7 +77,8 @@ export const NewsEventsQuery = graphql`
 `
 
 
-
+{
+  /* 
 const PaginationNav = styled.div`
   
   display:flex;
@@ -93,6 +95,34 @@ const PaginationNav = styled.div`
     &:hover {background-color:;#fff;}
 
     
+  }
+`;
+
+
+
+const L2Navigation = styled.aside`
+  padding-top: 120px;
+`;
+
+*/
+}
+
+const MainContent = styled.section`
+  width: 100%;
+  margin: 80px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media ${device.tablet} {
+    grid-template-columns: 2fr 1fr;
+    max-width: 768px;
+  }
+  @media ${device.laptop} {
+    grid-template-columns: 3fr 1fr;
+    max-width: 960px;
+  }
+  @media ${device.laptopL} {
+    max-width: 1200px;
   }
 `;
 
@@ -145,24 +175,7 @@ const L2Title = styled.div`
   }
 `;
 
-const MainContent = styled.section`
-  width: 100%;
-  margin: 80px auto;
-  display: grid;
-  grid-template-columns: 1fr;
 
-  @media ${device.tablet} {
-    grid-template-columns: 2fr 1fr;
-    max-width: 768px;
-  }
-  @media ${device.laptop} {
-    grid-template-columns: 3fr 1fr;
-    max-width: 960px;
-  }
-  @media ${device.laptopL} {
-    max-width: 1200px;
-  }
-`;
 
 const NewsList = styled.div`
   display: grid;
@@ -184,9 +197,7 @@ const NewsList = styled.div`
   }
 `;
 
-const L2Navigation = styled.aside`
-  padding-top: 120px;
-`;
+
 
 const Item = styled.div`
   display: flex;
