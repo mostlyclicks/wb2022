@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 
 const LogoWrap = styled.div`
   margin:auto 0;
-  flex: 0 1 130px;
+  flex: 0 1 200px;
   padding-left:1.5rem;
 
   @media (max-width:768px;) and (orientation: landscape) {
@@ -30,8 +30,6 @@ const Logo = () => {
   return (
     <LogoWrap as={Link} to="/">
       <img src={WBLogo} alt="Wieser Brothers Logo" width="190" />
-      {/*<Img fluid={data.file.childImageSharp.fluid} alt="logo image" />
-      <Img fixed={data.file.childImageSharp.fixed} alt="logo" />*/}
     </LogoWrap>
   )
 }
