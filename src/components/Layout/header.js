@@ -1,6 +1,5 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-// import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import Navbar from "../Navbar/Navbar"
 
