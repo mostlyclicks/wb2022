@@ -41,6 +41,8 @@ const L2PagesLayout = props => (
 
 export default L2PagesLayout
 
+{
+  /* 
 export const TestimonialQuery = graphql`
   query TestimonialQuery {
     allPrismicTestimonial {
@@ -62,7 +64,8 @@ export const TestimonialQuery = graphql`
     }
   }
 `;
-
+*/
+}
 
 const ContentWrapper = styled.div`
 

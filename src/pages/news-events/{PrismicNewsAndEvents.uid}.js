@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import Layout from "../../components/layout/Layout";
+import Layout from "../../components/Layout/Layout";
 import styled from "styled-components";
 import { device } from "../../components/media-queries";
 

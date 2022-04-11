@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout/Layout'
 
-const termsOfService = () => {
+const TermsOfService = () => {
   return (
     <Layout>
       <h1>Terms of Service</h1>
@@ -9,4 +9,4 @@ const termsOfService = () => {
   )
 }
 
-export default termsOfService
+export default TermsOfService
