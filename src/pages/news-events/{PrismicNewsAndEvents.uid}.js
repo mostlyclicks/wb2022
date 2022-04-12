@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from "../../components/Layout/Layout";
 import styled from "styled-components";
 import { device } from "../../components/media-queries";
+import SideBarAddress from '../../components/Subnavs/address-sidebar';
 
 
 
@@ -19,14 +20,15 @@ const NewsEventsPost = ({data}) => {
         <NewsMain>
           <h1>{article.data.title.text}</h1>
           <div>{article.data.news_event_long_description.text}</div>
+          <GatsbyImage image={image} alt={article.data.title.text} />
         </NewsMain>
 
-        <div>
-          <h2>
+        <NewsNav>
+          <SideBarAddress />
+          <h4>
             <Link to="/news-events">Back to News and Events</Link>
-          </h2>
-          <GatsbyImage image={image} alt={article.data.title.text} />
-        </div>
+          </h4>
+        </NewsNav>
       </NewsEventWrapper>
     </Layout>
   );
@@ -85,14 +87,19 @@ const NewsMain = styled.div`
     font-family: "IBM Plex Serif";
     font-size: 32px;
   }
-  padding: 20px;
+  padding: 20px 0 0 60px;
   img {
     width: 100%;
+    margin:2rem 0;
+  
   }
+  
   @media ${device.tablet} {
     padding: 0;
     max-width: 768px;
   }
 `;
 
-// const NewsNav = styled.aside``;
+const NewsNav = styled.aside`
+  h4 {text-align:center;}
+`;

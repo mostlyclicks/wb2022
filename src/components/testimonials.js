@@ -19,6 +19,7 @@ const RandomTestimonial = () => {
                 }
                 testimonial_text {
                   raw
+                  text
                 }
               }
             }
@@ -34,9 +35,9 @@ const RandomTestimonial = () => {
 
         return (
           <StyledBlockquote>
-            <p>
+            
               {RichText.render(singleTestimonial.data.testimonial_text.raw)}
-            </p>
+            
             <p>
               <strong>{singleTestimonial.data.title.text}</strong>
             </p>
@@ -50,6 +51,7 @@ const RandomTestimonial = () => {
 export default RandomTestimonial
 
 const StyledBlockquote = styled.blockquote`
+  
   &::before {
     content: "“";
     font-size: 20rem;
@@ -82,7 +84,7 @@ const StyledBlockquote = styled.blockquote`
   color: white;
   font-size: 1rem;
   line-height: 1.75rem;
-  border-radius:20px;
+  border-radius: 20px;
   padding: 2rem;
   color: rgba(0, 0, 0, 0.58);
   position: relative;
@@ -99,8 +101,7 @@ const StyledBlockquote = styled.blockquote`
 
   @media ${device.tablet} {
     p {
-      width:150%;
+      width: 150%;
     }
   }
-
-`
+`;

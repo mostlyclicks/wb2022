@@ -28,4 +28,5 @@ const StyledAddress = styled.div`
   background-color:#f3f3f3;
   padding:5px 20px;
   border-top:6px solid var(--wbGreenDark);
+  margin-top:2rem;
 `

@@ -21,10 +21,6 @@ const L2PagesLayout = props => (
       </L2MainImage>
       <Content>
         <MainContent>
-          {/* 
-          <div dangerouslySetInnerHTML={{ __html: props.content }} />
-          */}
-
           {RichText.render(props.content)}
         </MainContent>
 
@@ -143,6 +139,7 @@ const L2MainImage = styled.div`
 `
 
 const L2Navigation = styled.aside`
+
   display: flex;
   flex-direction: column;
 
