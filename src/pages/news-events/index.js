@@ -213,8 +213,9 @@ const Item = styled.div`
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: row;
-  min-height: 100%;
-  max-height:500px;
+  align-items:stretch;
+  
+  // max-height:500px;
   position: relative;
   top: 0;
   transition: all 0.1s ease-in;
@@ -225,19 +226,21 @@ const Item = styled.div`
 `;
 
 const ItemArticle = styled.article`
-  padding: 20px;
-  flex: 1;
+  padding: 0 20px;
+  flex: 1 1 auto;
+  margin-top:0;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content:flex-start;
+  align-self: flex-start;
 
   h3 {
     font-family: "IBM Plex Serif";
     flex: 1;
   }
   h5 {
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 `;
 
@@ -245,9 +248,10 @@ const ItemImg = styled.div`
   padding-bottom: 90%;
   background-size: cover;
   background-position: center center;
+  margin-bottom:-30px;
   
   @media {device.tablet} {
-    padding-bottom:50%;
+    padding-bottom:10%;
     
   }
 `;
