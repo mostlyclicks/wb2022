@@ -34,13 +34,17 @@ const index = ({data}) => {
 
             return (
               <ProjectItem>
-              <h3>
-                <Link to={project.node.uid}>
-                  {project.node.data.title.text}
-                </Link>
-              </h3>  
-                <div>
-                  <GatsbyImage image={image} alt="test" />
+                <h3>
+                  <Link to={project.node.uid}>
+                    {project.node.data.title.text}
+                  </Link>
+                </h3>
+                <div className="thumbnail">
+                  <GatsbyImage
+                    image={image}
+                    alt={project.node.data.title.text}
+                    style={{ width: `100%` }}
+                  />
                 </div>
               </ProjectItem>
             );
