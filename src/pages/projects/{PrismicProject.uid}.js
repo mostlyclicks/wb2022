@@ -25,10 +25,9 @@ const Project = ({data}) => {
           </div>
           <div id="project-description" className="box">
             {RichText.render(project.data.long_description.raw)}
+            <Link to="/projects">Back to projects</Link>
           </div>
 
-        
-          <Link to="/projects">Back to projects</Link>
           {/* 
         get first single image - not needed
       <GatsbyImage image={image} alt="alt" />
@@ -37,9 +36,8 @@ const Project = ({data}) => {
           {/* map over all project images */}
           {projectImages.map((img, index) => {
             const { gatsbyImageData } = img.image;
-            console.log(gatsbyImageData);
             return (
-              <div id={index} className="box">
+              <div id={index}>
                 <GatsbyImage image={gatsbyImageData} alt="alt" />
               </div>
             );
@@ -72,9 +70,8 @@ export const query = graphql`
               image {
                 alt
                 gatsbyImageData (
-                  width:800
+                  layout: FULL_WIDTH
                   placeholder: BLURRED
-                  srcSetMaxWidth: 1500
                 )
               }
             }
@@ -84,11 +81,12 @@ export const query = graphql`
     uid
     }
   }
-`
+`;
 
 
 
 const StyledProjectGrid = styled.section`
+  
   width: 100%;
   div {
     img {
@@ -102,99 +100,70 @@ const StyledProjectGrid = styled.section`
   }
   @media ${device.laptopL} {
   }
+
+ 
 `;
+
+
+
 
 const MainDiv = styled.div`
   display: inline-grid;
-  // grid-gap:20px;
-  // padding:20px;
-  margin-bottom: 20px;
-  h1 {
-    font-family: "IBM Plex Serif";
-  }
-  h3 {
-    font-family: "Open Sans";
-    font-weight: 400;
-  }
 
   div:nth-child(1) {
-    // border-top:3px solid var(--orange);
-    display: inline-grid;
-    color: var(--orange);
-    // background-color: var(--darkGray);
+    //TITLE BOX
+    padding: 20px;
     background-color: black;
-    // order:1;
-    padding: 1rem;
-    width: 100%;
-    padding-top: 150px;
-    height: 20vh;
-    margin-top: -150px;
-
-    // grid-area:1/1/3/6;
-  }
-  div:nth-child(2) {
-    padding: 1rem;
-  }
-
-  @media ${device.tablet} {
-    display: grid;
-    grid-gap: 10px;
-    grid-auto-rows: min-content;
-    padding: 0px;
-    // grid-template-columns:1fr 1fr 1fr 1fr 1fr;
-    // grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-    margin-top: -200px;
-    div {
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
+    color: var(--orange);
+    h1 {
+      font-family: "IBM Plex Serif";
     }
-
-    div:nth-child(1) {
-      border-top: 3px solid var(--orange);
-      // margin:20px;
-      color: var(--orange);
-      background-color: var(--darkGray);
-      order: 1;
-      padding: 1rem;
-      grid-area: 1 / 4 / 2 / 5;
-      height: 55%;
-      width: 80%;
-      margin-top: 20vh;
-    }
-
-    div:nth-child(2) {
-      order: 2;
-      grid-area: 3 / 1 / 4 / 2;
-      padding: 1rem 2rem;
+    h3 {
       font-family: "Open Sans";
       font-weight: 400;
     }
+  }
 
+  div:nth-child(2) {
+    //TEXT BOX
+    padding: 20px;
+    font-family: "Open Sans";
+    line-height:1.55rem:
+  }
+
+  div:nth-child(3) {
     //MAIN IMAGE
-    div:nth-child(3) {
-      grid-area: 1 / 1 / 3 / 6;
+  }
+
+  @media ${device.tablet} {
+    display:grid;
+    gap:1.5rem;
+    grid-template-columns:2fr 1fr;
+    grid-template-rows:2fr 2fr;
+    padding:0px;
+    div:nth-child(1){
+      flex:1;
+      
+    }
+    div:nth-child(2) {
+      flex:1;
     }
 
-    div:nth-child(4) {
-      grid-area: 3 / 2 / 4 / 6;
-    }
-    div:nth-child(5) {
-    }
-    div:nth-child(6) {
+    div:nth-child(3) {
       img {
-        overflow: none;
+        object-fit:cover;
       }
+      border:1px solid red;
+      
     }
-    div:nth-child(7) {
-      // border:1px solid red;
-    }
+
+
   }
   @media ${device.laptop} {
-    div:nth-child(1) {
-      grid-area: 1 / 3 / 2 / 6;
-    }
   }
+  @media ${device.laptopL} {
+  }
+
+  
 `;
+
