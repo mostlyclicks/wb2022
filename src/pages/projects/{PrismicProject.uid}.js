@@ -153,7 +153,7 @@ const MainDiv = styled.div`
       img {
         object-fit:cover;
       }
-      border:1px solid red;
+      
       
     }
 
