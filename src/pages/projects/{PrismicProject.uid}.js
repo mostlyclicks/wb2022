@@ -129,10 +129,10 @@ const MainDiv = styled.div`
   }
 
     @media ${device.tablet} {
-      max-width:1200px;
+      max-width:1600px;
       margin:0 auto 80px auto;
       gap:1.5rem;
-      padding:0px;
+      padding:20px;
   
       #project-title-location {
         grid-area: 1/1/2/2;
@@ -165,7 +165,8 @@ const MainDiv = styled.div`
         background-color:green;
         grid-area:5/1/6/3;
         img {
-           
+           box-shadow:20px 20px 0px rgba(0,0,0,.5);
+          
         }
       }
 
@@ -174,7 +175,7 @@ const MainDiv = styled.div`
         grid-area:5/1/6/3;
         background-color:red;
         img {
-           
+          
         }
       }
 
@@ -199,7 +200,7 @@ const MainDiv = styled.div`
 
 
   @media ${device.laptop} {
-          min-width:1600px;
+          
 
   }
   @media ${device.laptopL} {

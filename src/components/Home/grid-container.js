@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 import { device } from "../media-queries"
-// import gridBackground from '../../images/hero_8918_background.jpg'
 import block2 from "../../images/Group-Photo-2.jpg"
 import block3 from "../../images/JPEG-image-1.jpg"
 import block4 from "../../images/DJI_0317.jpg"

@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import "./layout.css"
 import Header from './header'
 import Footer from './footer'
 import TopNav from './top-nav'
-import styled from "styled-components"
+
 
 const Layout = ({ pageTitle, children }) => {
   return (

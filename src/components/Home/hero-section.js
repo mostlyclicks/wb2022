@@ -26,22 +26,6 @@ const HeroSection = () =>(
         />
       </video>
    
-
-    {/*   
-       
- 
- 
-      <iframe
-         title="video"
-         width="853"
-         height="480"
-        src="https://www.youtube.com/embed/mT_surCAVss"
-         frameborder="0"
-         allowfullscreen
-         allow="autoplay"
-      
-       ></iframe>
-       */}
     </VideoContainer>
   </StyledHeroSection>
 )
@@ -51,11 +35,9 @@ export default HeroSection
 const StyledHeroSection = styled.section`
 margin-bottom:-4px;
 
-
 @media ${device.tablet} {
 }
 `
-
 
 const VideoContainer = styled.div`
 video {
