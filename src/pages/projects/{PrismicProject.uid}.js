@@ -23,25 +23,20 @@ const Project = ({data}) => {
             <h1>{project.data.title.text}</h1>
             <h3>{project.data.location}</h3>
           </div>
-          <div id="project-description" className="box">
+          <div id="project-description" className="boxx">
             {RichText.render(project.data.long_description.raw)}
             <Link to="/projects">Back to projects</Link>
           </div>
-
-          {/* 
-        get first single image - not needed
-      <GatsbyImage image={image} alt="alt" />
-       */}
-
-          {/* map over all project images */}
+          
           {projectImages.map((img, index) => {
             const { gatsbyImageData } = img.image;
             return (
-              <div id={index}>
+              <div id={`box-${index}`}>
                 <GatsbyImage image={gatsbyImageData} alt="alt" />
               </div>
             );
-          })}
+          } 
+        )}
         </MainDiv>
       </StyledProjectGrid>
     </Layout>
@@ -108,13 +103,15 @@ const StyledProjectGrid = styled.section`
 
 
 const MainDiv = styled.div`
-  display: inline-grid;
+  display: grid;
 
-  div:nth-child(1) {
+  #project-title-location {
     //TITLE BOX
     padding: 20px;
+    margin:20px;
     background-color: black;
     color: var(--orange);
+    
     h1 {
       font-family: "IBM Plex Serif";
     }
@@ -124,42 +121,86 @@ const MainDiv = styled.div`
     }
   }
 
-  div:nth-child(2) {
+  #project-description {
     //TEXT BOX
     padding: 20px;
     font-family: "Open Sans";
-    line-height:1.55rem:
+    line-height:1.55rem:    
   }
 
-  div:nth-child(3) {
-    //MAIN IMAGE
-  }
-
-  @media ${device.tablet} {
-    display:grid;
-    gap:1.5rem;
-    grid-template-columns:2fr 1fr;
-    grid-template-rows:2fr 2fr;
-    padding:0px;
-    div:nth-child(1){
-      flex:1;
-      
-    }
-    div:nth-child(2) {
-      flex:1;
-    }
-
-    div:nth-child(3) {
-      img {
-        object-fit:cover;
+    @media ${device.tablet} {
+      max-width:1200px;
+      margin:0 auto 80px auto;
+      gap:1.5rem;
+      padding:0px;
+  
+      #project-title-location {
+        grid-area: 1/1/2/2;
       }
-      
-      
+
+      #project-description {
+        grid-area: 1/2/2/4;
+      }
+
+
+
+      #box-0 {
+        grid-area:2/1/3/3;
+        postion:relative;
+        z-index:100;
+      }
+
+      #box-1 {
+         grid-area:2/3/4/5;
+         padding-top:80px;
+
+      }
+
+      #box-2 {
+        grid-area:4/2/5/5;
+      }
+
+      #box-3 {
+        
+        background-color:green;
+        grid-area:5/1/6/3;
+        img {
+           
+        }
+      }
+
+      #box-4 {
+        border:2px solid red !important;
+        grid-area:5/1/6/3;
+        background-color:red;
+        img {
+           
+        }
+      }
+
+      #box-5 {
+        border:2px solid green !important;
+        4/1/5/3
+        background-color:yellow;
+        img {
+           
+        }
+      }
+
+      #box-6 {
+        border:2px solid yellow !important;
+        grid-area:5/1/6/4;
+        background-color:purple;
+        img {
+           
+        }
+      }
     }
 
 
-  }
   @media ${device.laptop} {
+          min-width:1600px;
+
   }
   @media ${device.laptopL} {
   }
