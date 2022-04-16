@@ -1,13 +1,12 @@
 import React from 'react'
 import { Link, graphql } from "gatsby"
-import { RichText } from "prismic-reactjs"
 import styled from "styled-components"
-import Layout from "../../components/Layout/Layout"
-import { device } from "../../components/media-queries"
-import MainSubnav from "../../components/Subnavs/main-subnav"
-import bgImage from "../../images/ConcreteCrew-HolmenCheese2-compressed.jpg"
-import bgImg from "../../images/trust-partnership-excellence.png"
-import workApp from "../../images/WB-Job-Application-Fillable-Form-12-21-19.pdf"
+import Layout from "../../../components/Layout/Layout"
+import { device } from "../../../components/media-queries"
+import MainSubnav from "../../../components/Subnavs/main-subnav"
+import bgImage from "../../../images/ConcreteCrew-HolmenCheese2-compressed.jpg"
+import bgImg from "../../../images/trust-partnership-excellence.png"
+import workApp from "../../../images/WB-Job-Application-Fillable-Form-12-21-19.pdf"
 
 
 const Careers = ( {data} ) => {
@@ -16,7 +15,7 @@ const Careers = ( {data} ) => {
   
   const EmpOps = () => {
     return (
-      empOpportunites.map(job => <p><Link to={`/careers/${job.uid}`}>{RichText.asText(job.data.title.text)}</Link></p>)
+      empOpportunites.map(job => <p><Link to={`/firm/careers/${job.uid}`}>{job.data.title.text}</Link></p>)
     )
   }
 
@@ -46,15 +45,18 @@ const Careers = ( {data} ) => {
                Click here to Apply
              </a>
            </p>
-           <iframe
-             width="560"
-             height="315"
-             src="https://www.youtube.com/embed/o74bnHhBs04"
-             title="YouTube video player"
-             frameborder="0"
-             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-             allowfullscreen
-           ></iframe>
+           <p>
+             <iframe
+               width="640"
+               height="480"
+               src="https://www.youtube.com/embed/o74bnHhBs04"
+               title="YouTube video player"
+               frameborder="0"
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+               allowfullscreen
+               style={{margin:"0 auto"}}
+             ></iframe>
+           </p>
            <p>
              Wieser Brothers General Contractor, Inc. is a well-recognized and
              highly-respected construction company in La Crescent, MN (just
@@ -99,7 +101,7 @@ const Careers = ( {data} ) => {
        </Content>
      </ContentWrapper>
    </Layout>
- )
+ );
 
 }
 

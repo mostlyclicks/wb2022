@@ -142,8 +142,6 @@ const MainDiv = styled.div`
         grid-area: 1/2/2/4;
       }
 
-
-
       #box-0 {
         grid-area:2/1/3/3;
         postion:relative;
