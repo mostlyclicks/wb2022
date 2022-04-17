@@ -26,9 +26,9 @@ const EmploymentOpportunity = ({ data }) => {
       backgroundImage={bgImage}
       subnav={`firm`}
       content={job.data.job_description.raw}
-    >
+    />
       
-    </L2PagesLayout>
+    
   );
 };
 

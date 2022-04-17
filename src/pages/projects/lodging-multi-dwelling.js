@@ -18,7 +18,7 @@ const index = ({data}) => {
       <ProjectWrapper>
         <L2MainImage>
           <L2Title>
-            <h1>Projects</h1>
+            <h1>Lodging/Multi-Dwelling</h1>
           </L2Title>
         </L2MainImage>
       </ProjectWrapper>
@@ -66,7 +66,7 @@ export default index
 
 export const ProjectQuery = graphql`
   query {
-    allPrismicProject {
+    allPrismicProject(filter: { tags: { eq: "lodging multi-dwelling" } }) {
       totalCount
       edges {
         node {
