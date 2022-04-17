@@ -35,7 +35,7 @@ const index = ({data}) => {
             return (
               <ProjectItem>
                 <h3>
-                  <Link to={project.node.uid}>
+                  <Link to={`/projects/${project.node.uid}`}>
                     {project.node.data.title.text}
                   </Link>
                 </h3>
