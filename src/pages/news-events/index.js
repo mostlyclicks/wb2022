@@ -1,11 +1,12 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import styled from "styled-components";
 import { device } from "../../components/media-queries";
 import Layout from '../../components/Layout/Layout'
 import bgImg from "../../images/news-events-header.jpg";
 import bgImg2 from "../../images/trust-partnership-excellence.png";
-import styled from "styled-components"
+
 
 const Index = ({data}) => {
 
@@ -212,9 +213,9 @@ const Item = styled.div`
   color: #444;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: row;
-  align-items:stretch;
-  
+  // flex-direction: row;
+  // align-items:stretch;
+  // min-height:3rem;
   // max-height:500px;
   position: relative;
   top: 0;
@@ -245,7 +246,7 @@ const ItemArticle = styled.article`
 `;
 
 const ItemImg = styled.div`
-  padding-bottom: 90%;
+  padding-bottom: 10%;
   background-size: cover;
   background-position: center center;
   margin-bottom:-30px;
