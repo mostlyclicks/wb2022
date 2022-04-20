@@ -2,6 +2,8 @@ import React from 'react'
 import { graphql } from "gatsby";
 import { RichText } from "prismic-reactjs";
 import Layout from '../components/Layout/Layout'
+import { device } from "../components/media-queries";
+import styled from "styled-components";
 
 const PrivacyPolicy = ({data}) => {
 
@@ -10,12 +12,12 @@ const PrivacyPolicy = ({data}) => {
 
   return (
     <Layout>
-      <h1>{pageData.page_title.text}</h1>
-      <main>
-        {RichText.render(pageData.page_body.raw)}
-      </main>
+      <Content>
+        <h1>{pageData.page_title.text}</h1>
+        <main>{RichText.render(pageData.page_body.raw)}</main>
+      </Content>
     </Layout>
-  )
+  );
 }
 
 export default PrivacyPolicy
@@ -38,4 +40,24 @@ query {
   }
 }
 `
+
+const Content = styled.section`
+  padding: 20px;
+  @media ${device.tablet} {
+    margin: 60px auto;
+    // border:1px solid green;
+    max-width: 768px;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  @media ${device.laptop} {
+    max-width: 960px;
+    grid-template-columns: 3fr 1fr;
+  }
+
+  @media ${device.laptopL} {
+    // border:1px solid black;
+    max-width: 1200px;
+  }
+`;
 
