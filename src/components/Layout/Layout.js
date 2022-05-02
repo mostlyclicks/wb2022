@@ -5,14 +5,13 @@ import "./layout.css"
 import Header from './header'
 import Footer from './footer'
 import TopNav from './top-nav'
-import Popup from './popup'
+
 
 
 const Layout = ({ pageTitle, children }) => {
   return (
     <>
       <title>{pageTitle}</title>  
-      <Popup />
       <TopNav />    
       <Header />
       <ContentDiv>

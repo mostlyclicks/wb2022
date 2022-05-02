@@ -1,21 +1,51 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import styled from "styled-components";
 import { device } from "../media-queries";
+import Popup from './popup'
 
 const TopNav = () => {
+
+  const [popupShow, setPopupShow] = useState(0)
+
+  const showPopup = () => {
+    setPopupShow(1)
+  }
+
+  const hidePopup = () => {
+    setPopupShow(0)
+  }
+
+
+
+
   return (
-    <StyledTopNav className="" style={{backgroundColor: '#3d3d3d'}}>
+    <StyledTopNav className="" style={{ backgroundColor: "#3d3d3d" }}>
+      
+      { popupShow >= 1 ? <Popup onHide={hidePopup} /> : '' }
+      
       <ul className="flex justify-center md:justify-end flex-wrap gap-6 ">
-        <li className="hidden md:block"><Link to="/">COVID-19 UPDATE</Link></li>
-        <li className="hidden md:block"><Link to ="/firm/careers">Careers</Link></li>
-        <li><a href="mailto:bids@wieserbrothers.com">Submit Bids</a></li>
-        <li><a href="mailto:info@wieserbrothers.com">Info</a></li>
-        <li className="hidden md:block"><Link to="/contact-us">Contact Us</Link></li>
-        <li><a href="tel:+1-507-895-8903">507.895.8903</a></li>
+        <li className="hidden md:block">
+          <a href="#" onClick={showPopup}>COVID-19 UPDATE</a>
+        </li>
+        <li className="hidden md:block">
+          <Link to="/firm/careers">Careers</Link>
+        </li>
+        <li>
+          <a href="mailto:bids@wieserbrothers.com">Submit Bids</a>
+        </li>
+        <li>
+          <a href="mailto:info@wieserbrothers.com">Info</a>
+        </li>
+        <li className="hidden md:block">
+          <Link to="/contact-us">Contact Us</Link>
+        </li>
+        <li>
+          <a href="tel:+1-507-895-8903">507.895.8903</a>
+        </li>
       </ul>
     </StyledTopNav>
-  )
+  );
 }
 
 export default TopNav
