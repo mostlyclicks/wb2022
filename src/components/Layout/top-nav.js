@@ -16,9 +16,6 @@ const TopNav = () => {
     setPopupShow(0)
   }
 
-
-
-
   return (
     <StyledTopNav className="" style={{ backgroundColor: "#3d3d3d" }}>
       

@@ -5,7 +5,7 @@ const popup = (props) => {
   return (
     <Backdrop onClick={props.onHide}>
       <StyledPopup>
-        <StyledPopupHeader><a href="#" onClick={props.onHide} style={{color:"black"}}>close X</a></StyledPopupHeader>
+        <StyledPopupHeader><button onClick={props.onHide} style={{color:"black"}}>close X</button></StyledPopupHeader>
         <h1>Wieser Brothers COVID-19 Update</h1>
         <p>
           As we continue to monitor the Coronavirus (COVID-19) and its rippling
@@ -83,4 +83,12 @@ const StyledPopupHeader = styled.div`
   font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
+  button {
+    border:none;
+    background-color:transparent;
+    color:black;
+    font-weight:900;
+    text-transform:uppercase;
+    cursor:pointer;
+  }
 `;
