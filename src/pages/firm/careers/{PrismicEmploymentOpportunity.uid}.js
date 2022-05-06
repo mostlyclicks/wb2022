@@ -11,7 +11,6 @@ import bgImage from "../../../images/ConcreteCrew-HolmenCheese2-compressed.jpg";
 import bgImg from "../../../images/trust-partnership-excellence.png";
 import workApp from "../../../images/WB-Job-Application-Fillable-Form-12-21-19.pdf";
 import { RichText } from "prismic-reactjs";
-// import L2PagesLayout from "../../../components/l2-page-template";
 
 
 //Template for Employment opp/job
