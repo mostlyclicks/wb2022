@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/Layout/Layout"
+import SEO from '../components/seo'
 import { device } from "../components/media-queries";
 import styled from "styled-components";
 
@@ -10,6 +11,7 @@ import styled from "styled-components";
 const NotFoundPage = () => {
   return (
     <Layout>
+      <SEO title="404: Page not found" />
       <Content>
         <h1>404 | Hmmmm... this page does not exsist.</h1>
         <p>

@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 // import { RichText } from "prismic-reactjs";
 import L2PagesLayout from "../../components/l2-page-template";
+import SEO from '../../components/seo'
 import bgImage from "../../images/Commitment-FleetFinal-web.jpg";
 
 const ConstructionManagement = ({data}) => {
@@ -9,12 +10,15 @@ const ConstructionManagement = ({data}) => {
   const pageData = data.allPrismicConstructionManagement.edges[0].node.data
 
   return (
-    <L2PagesLayout 
-      title = {pageData.page_title.text}
-      subnav= {`services`}
-      backgroundImage={bgImage}
-      content = {pageData.page_body.raw}
-    />
+    <>
+      <SEO title={`Services - ${pageData.page_title.text}`} />
+      <L2PagesLayout
+        title={pageData.page_title.text}
+        subnav={`services`}
+        backgroundImage={bgImage}
+        content={pageData.page_body.raw}
+      />
+    </>
   );
 }
 

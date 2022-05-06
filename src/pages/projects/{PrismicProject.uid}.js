@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import Layout from '../../components/Layout/Layout'
+import SEO from '../../components/seo'
 import styled from "styled-components";
 import { device } from "../../components/media-queries";
 import { RichText } from "prismic-reactjs";
@@ -17,6 +18,7 @@ const Project = ({data}) => {
   
   return (
     <Layout>
+    <SEO title={`Projects: ${project.data.title.text}`} />
       <StyledProjectGrid>
         <MainDiv>
           <div id="project-title-location" className="box">

@@ -1,11 +1,13 @@
 import React from 'react'
 import Layout from '../components/Layout/Layout'
+import SEO from "../components/seo";
 import { device } from "../components/media-queries";
 import styled from "styled-components";
 
 const CookiePolicy = () => {
   return (
     <Layout>
+      <SEO title="Cookie Policy" />
       <Content>
         <h2>Cookie Policy</h2>
         <p>

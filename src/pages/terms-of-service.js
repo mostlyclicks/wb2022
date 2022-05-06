@@ -1,11 +1,13 @@
 import React from 'react'
 import Layout from '../components/Layout/Layout'
+import SEO from '../components/seo'
 import { device } from "../components/media-queries";
 import styled from "styled-components";
 
 const TermsOfService = () => {
   return (
     <Layout>
+      <SEO title="Terms of Service" />
       <Content>
         <h2>Terms of Service</h2>
         <p>

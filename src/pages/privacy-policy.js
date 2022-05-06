@@ -1,7 +1,8 @@
 import React from 'react'
 import { graphql } from "gatsby";
 import { RichText } from "prismic-reactjs";
-import Layout from '../components/Layout/Layout'
+import Layout from '../components/Layout/Layout';
+import SEO from "../components/seo";
 import { device } from "../components/media-queries";
 import styled from "styled-components";
 
@@ -12,6 +13,7 @@ const PrivacyPolicy = ({data}) => {
 
   return (
     <Layout>
+      <SEO title="Privacy Policy" />
       <Content>
         <h1>{pageData.page_title.text}</h1>
         <main>{RichText.render(pageData.page_body.raw)}</main>

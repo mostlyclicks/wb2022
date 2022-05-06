@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, Link } from "gatsby";
 import { RichText } from "prismic-reactjs";
 import L2PagesLayout from "../../components/l2-page-template";
+import SEO from "../../components/seo"
 import bgImage from "../../images/Action-Field-Picture.jpg";
 
 const ServicesIndex = ({data}) => {
@@ -9,12 +10,15 @@ const ServicesIndex = ({data}) => {
   const pageData = data.allPrismicServices.edges[0].node.data
 
   return (
-    <L2PagesLayout
-      title = {`Our Services`}
-      subnav = {`services`}
-      backgroundImage={bgImage}
-      content = {pageData.page_body.raw}
-    />
+    <>
+      <SEO title="Our Services" />
+      <L2PagesLayout
+        title = {`Our Services`}
+        subnav = {`services`}
+        backgroundImage={bgImage}
+        content = {pageData.page_body.raw}
+      />
+    </>
   )
 }
 

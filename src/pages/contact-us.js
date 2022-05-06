@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import Layout from "../components/Layout/Layout";
+import SEO from "../components/seo";
 import { device } from "../components/media-queries";
 
 const ContactUs = () => (
   <Layout>
+    <SEO title="Contact Us" />
     <StyledContactHeader>
       <h1>Contact Us</h1>
     </StyledContactHeader>

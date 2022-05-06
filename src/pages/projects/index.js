@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import Layout from '../../components/Layout/Layout'
+import SEO from '../../components/seo'
 import { device } from "../../components/media-queries";
 import bgImg from "../../images/DJI_0027.jpg";
 import bgImg2 from "../../images/trust-partnership-excellence.png";
@@ -15,6 +16,7 @@ const index = ({data}) => {
 
   return (
     <Layout>
+      <SEO title="Projects" />
       <ProjectWrapper>
         <L2MainImage>
           <L2Title>

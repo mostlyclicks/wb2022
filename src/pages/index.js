@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 import Layout from '../components/Layout/Layout'
+import SEO from '../components/seo'
 import HeroSection from '../components/Home/hero-section'
 import HomeGrid from "../components/Home/grid-container";
 import HeroBG from "../images/hero_8918-bg3.jpg";
@@ -8,6 +9,7 @@ import HeroBG from "../images/hero_8918-bg3.jpg";
 const Index = () => {
   return (
     <Layout>
+      <SEO title="General Contractor, Design/Build" />
       <HeroSection />
       <MainSection>
         <HomeGrid />
