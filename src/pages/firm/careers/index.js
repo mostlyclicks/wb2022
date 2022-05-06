@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../../../components/Layout/Layout"
+import SEO from '../../../components/seo'
 import { device } from "../../../components/media-queries"
 import MainSubnav from "../../../components/Subnavs/main-subnav"
 import bgImage from "../../../images/ConcreteCrew-HolmenCheese2-compressed.jpg"
@@ -21,6 +22,7 @@ const Careers = ( {data} ) => {
 
  return (
    <Layout>
+     <SEO title="Careers" />
      <ContentWrapper>
        <L2MainImage
          style={{

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from "gatsby"
 import { RichText } from "prismic-reactjs"
-
+import SEO from '../../components/seo'
 import Layout from "../../components/Layout/Layout"
 
 
@@ -15,8 +15,8 @@ const Testimonials = ( {data} ) => {
   
   return (
     <Layout>
+      <SEO title="Testimonials" />
       <h1>Testimonials</h1>
-      
       
       <ul>
         {testimonialList.map(quote => {

@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from "styled-components";
 import { device } from "../../components/media-queries";
 import Layout from '../../components/Layout/Layout'
+import SEO from '../../components/SEO'
 import bgImg from "../../images/news-events-header.jpg";
 import bgImg2 from "../../images/trust-partnership-excellence.png";
 
@@ -14,6 +15,7 @@ const Index = ({data}) => {
   
   return (
     <Layout>
+      <SEO title="News & Events" />
       <NewsWrapper>
         <L2MainImage>
           <L2Title>

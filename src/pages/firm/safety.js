@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import L2PagesLayout from "../../components/l2-page-template"
+import SEO from '../../components/seo'
 import bgImage from "../../images/Framing-Construction.jpg"
 
 
@@ -10,6 +11,7 @@ const Safety = ({data}) => {
   
   return (
   <>
+    <SEO title="Safey" />
     <L2PagesLayout 
       title={`Safety`}
       subnav={`firm`}

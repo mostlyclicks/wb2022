@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import L2PagesLayout from "../../components/l2-page-template"
+import SEO from '../../components/seo'
 import bgImage from "../../images/Group-Photo-2.jpg"
 
 const History = ({data}) => {
@@ -9,6 +10,7 @@ const History = ({data}) => {
 
   return (
   <>
+    <SEO title="Our History" />
     <L2PagesLayout 
       title = {`Our History`}
 

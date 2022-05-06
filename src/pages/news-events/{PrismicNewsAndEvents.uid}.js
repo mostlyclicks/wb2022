@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from "../../components/Layout/Layout";
+import SEO from '../../components/seo'
 import styled from "styled-components";
 import { device } from "../../components/media-queries";
 import SideBarAddress from '../../components/Subnavs/address-sidebar';
@@ -16,6 +17,7 @@ const NewsEventsPost = ({data}) => {
 
   return (
     <Layout>
+      <SEO title={article.data.title.text} />
       <NewsEventWrapper>
         <NewsMain>
           <h1>{article.data.title.text}</h1>

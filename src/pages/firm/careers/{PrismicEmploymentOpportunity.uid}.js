@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import styled from "styled-components";
 import Layout from "../../../components/Layout/Layout";
 import L2PagesLayout from "../../../components/l2-page-template"
+import SEO from '../../../components/seo'
 import { device } from "../../../components/media-queries";
 import MainSubnav from "../../../components/Subnavs/main-subnav";
 import bgImage from "../../../images/ConcreteCrew-HolmenCheese2-compressed.jpg";
@@ -21,14 +22,15 @@ const EmploymentOpportunity = ({ data }) => {
   const job = data.prismicEmploymentOpportunity;
 
   return (
-    <L2PagesLayout
-      title={`Careers`}
-      backgroundImage={bgImage}
-      subnav={`firm`}
-      content={job.data.job_description.raw}
-    />
-      
-    
+    <>
+      <SEO title={`Careers: ${job.data.title.text}`} />
+      <L2PagesLayout
+        title={`Careers`}
+        backgroundImage={bgImage}
+        subnav={`firm`}
+        content={job.data.job_description.raw}
+      />
+    </>
   );
 };
 

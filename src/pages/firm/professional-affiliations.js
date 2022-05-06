@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import L2PagesLayout from "../../components/l2-page-template"
+import SEO from '../../components/seo'
 import bgImage from "../../images/ABC-wi.jpg"
 
 const ProfessionalAffiliations = ({data}) => {
@@ -8,16 +9,16 @@ const ProfessionalAffiliations = ({data}) => {
   const pageData = data.allPrismicProfessionalAffiliations.edges[0].node.data
   
   return (
-  <>
-    <L2PagesLayout 
-      title={`Professional Affiliations`}
-      subnav={`firm`}
-      backgroundImage={bgImage}
-      content = {pageData.page_body.raw}
-    />
-  </>
-
-)
+    <>
+      <SEO title="Professional Affiliations" />
+      <L2PagesLayout
+        title={`Professional Affiliations`}
+        subnav={`firm`}
+        backgroundImage={bgImage}
+        content={pageData.page_body.raw}
+      />
+    </>
+  );
 }
 
 export const query = graphql`
