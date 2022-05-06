@@ -54,20 +54,23 @@ export default Index
 
 export const NewsEventsQuery = graphql`
   query {
-    allPrismicNewsAndEvents {
+    allPrismicNewsAndEvents(
+      sort: { fields: data___date_published, order: DESC }
+    ) {
       edges {
         node {
           id
           uid
           url
           data {
+            date_published
             title {
               text
             }
             thumbnail {
               gatsbyImageData(
-                width:280
-                height:280
+                width: 280
+                height: 280
                 placeholder: BLURRED
                 srcSetMaxWidth: 500
               )
@@ -77,7 +80,7 @@ export const NewsEventsQuery = graphql`
       }
     }
   }
-`
+`;
 
 
 {

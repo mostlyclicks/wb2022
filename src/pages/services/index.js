@@ -11,7 +11,7 @@ const ServicesIndex = ({data}) => {
 
   return (
     <>
-      <SEO title="Our Services" />
+      <SEO title="General Contractor Services" />
       <L2PagesLayout
         title = {`Our Services`}
         subnav = {`services`}
