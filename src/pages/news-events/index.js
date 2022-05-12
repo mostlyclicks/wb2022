@@ -15,7 +15,10 @@ const Index = ({data}) => {
   
   return (
     <Layout>
-      <SEO title="News & Events" />
+      <SEO
+        title="News & Events"
+        description="News and Events at Wieser Brothers, General Contractor, Inc. Contact us at 507.895.8903 for more information."
+      />
       <NewsWrapper>
         <L2MainImage>
           <L2Title>

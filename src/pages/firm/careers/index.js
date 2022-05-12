@@ -22,7 +22,10 @@ const Careers = ( {data} ) => {
 
  return (
    <Layout>
-     <SEO title="Careers" />
+     <SEO
+       title="Careers"
+       description="See employment opportunities at Wieser Brothers careers. Contact us at 507.895.8903 for more information."
+     />
      <ContentWrapper>
        <L2MainImage
          style={{
@@ -56,7 +59,7 @@ const Careers = ( {data} ) => {
                frameborder="0"
                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                allowfullscreen
-               style={{margin:"0 auto"}}
+               style={{ margin: "0 auto" }}
              ></iframe>
            </p>
            <p>

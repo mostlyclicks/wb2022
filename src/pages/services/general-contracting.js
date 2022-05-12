@@ -11,15 +11,18 @@ const GeneralContracting = ({data}) => {
 
   return (
     <>
-    <SEO title={`Services - ${pageData.page_title.text}`} />
-    <L2PagesLayout 
-      title={pageData.page_title.text}
-      subnav={`services`}
-      backgroundImage={bgImage}
-      content={pageData.page_body.raw}
-    />
+      <SEO
+        title={`Services - ${pageData.page_title.text}`}
+        description="Wieser Brothers can manage all aspects of your construction project. Contact us at 507.895.8903 for more information."
+      />
+      <L2PagesLayout
+        title={pageData.page_title.text}
+        subnav={`services`}
+        backgroundImage={bgImage}
+        content={pageData.page_body.raw}
+      />
     </>
-  )
+  );
 }
 
 export default GeneralContracting

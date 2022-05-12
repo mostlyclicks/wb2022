@@ -9,19 +9,19 @@ const History = ({data}) => {
   const pageData = data.allPrismicHistory.edges[0].node.data
 
   return (
-  <>
-    <SEO title="Our History" />
-    <L2PagesLayout 
-      title = {`Our History`}
-
-      backgroundImage = {bgImage}
-      subnav={`firm`}
-      content = {pageData.page_body.raw}
- 
+    <>
+      <SEO
+        title="Our History"
+        descripion="Learn about the history or Wieser Brothers. Contact us at 507.895.8903 for more information."
+      />
+      <L2PagesLayout
+        title={`Our History`}
+        backgroundImage={bgImage}
+        subnav={`firm`}
+        content={pageData.page_body.raw}
       />
     </>
-  
-)
+  );
 }
 
 export const HistoryQuery = graphql`

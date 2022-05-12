@@ -11,15 +11,18 @@ const ServicesIndex = ({data}) => {
 
   return (
     <>
-      <SEO title="General Contractor Services" />
+      <SEO
+        title="General Contractor Services"
+        description=" If you're looking for a general contractor that can take on any project, big or small, then Wieser Brothers is the company for you. We have years of experience in the construction industry and are dedicated to providing quality services to our clients."
+      />
       <L2PagesLayout
-        title = {`Our Services`}
-        subnav = {`services`}
+        title={`Our Services`}
+        subnav={`services`}
         backgroundImage={bgImage}
-        content = {pageData.page_body.raw}
+        content={pageData.page_body.raw}
       />
     </>
-  )
+  );
 }
 
 export default ServicesIndex

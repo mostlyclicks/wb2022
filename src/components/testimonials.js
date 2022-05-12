@@ -84,7 +84,6 @@ const StyledBlockquote = styled.blockquote`
   color: white;
   font-size: 1rem;
   line-height: 1.75rem;
-  border-radius: 20px;
   padding: 2rem;
   color: rgba(0, 0, 0, 0.58);
   position: relative;

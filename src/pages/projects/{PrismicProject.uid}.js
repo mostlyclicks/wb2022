@@ -18,7 +18,7 @@ const Project = ({data}) => {
   
   return (
     <Layout>
-    <SEO title={`Projects: ${project.data.title.text}`} />
+    <SEO title={`Projects: ${project.data.title.text}`} description={`Wieser Brothers Project: ${project.data.title.text}`} />
       <StyledProjectGrid>
         <MainDiv>
           <div id="project-title-location" className="box">

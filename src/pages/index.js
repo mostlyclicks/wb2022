@@ -9,7 +9,9 @@ import HeroBG from "../images/hero_8918-bg3.jpg";
 const Index = () => {
   return (
     <Layout>
-      <SEO title="General Contractor, Design/Build" />
+      <SEO title="General Contractor, Design/Build"
+        description="Learn about Wieser Brothers, General Contracter, Inc. located in La Crescent MN serving the midwest and western regions."
+      />
       <HeroSection />
       <MainSection>
         <HomeGrid />

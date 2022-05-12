@@ -9,18 +9,19 @@ const Sustainability = ({data}) => {
   const pageData = data.allPrismicSustainability.edges[0].node.data
 
   return (
-  <>
-    <SEO title="Sustainability" />
-    <L2PagesLayout 
-      title= {`Sustainability`}
-      subnav={`firm`}
-      backgroundImage = {bgImage}
-      content = {pageData.page_body.raw}
-    
-    />
-  </>
-
-)
+    <>
+      <SEO
+        title="Sustainability"
+        description="Learn about sustainability initiatives at Wieser Brothers. Contact us at 507.895.8903 for more information."
+      />
+      <L2PagesLayout
+        title={`Sustainability`}
+        subnav={`firm`}
+        backgroundImage={bgImage}
+        content={pageData.page_body.raw}
+      />
+    </>
+  );
 }
 
 export const query = graphql`

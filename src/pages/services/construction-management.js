@@ -11,7 +11,10 @@ const ConstructionManagement = ({data}) => {
 
   return (
     <>
-      <SEO title={`Services - ${pageData.page_title.text}`} />
+      <SEO
+        title={`Services - ${pageData.page_title.text}`}
+        description="Learn how Wieser Brothers manage your construction projects. Contact us at 507.895.8903 for more information. "
+      />
       <L2PagesLayout
         title={pageData.page_title.text}
         subnav={`services`}

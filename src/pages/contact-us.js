@@ -6,7 +6,7 @@ import { device } from "../components/media-queries";
 
 const ContactUs = () => (
   <Layout>
-    <SEO title="Contact Us" />
+    <SEO title="Contact Us" description="Contact us for your general contracting, design/build, construction or project management needs. Wieser Brothers, General Contractor Inc."/>
     <StyledContactHeader>
       <h1>Contact Us</h1>
     </StyledContactHeader>

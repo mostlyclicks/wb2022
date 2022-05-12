@@ -13,7 +13,7 @@ const PrivacyPolicy = ({data}) => {
 
   return (
     <Layout>
-      <SEO title="Privacy Policy" />
+      <SEO title="Privacy Policy" description="Read our policy on privacy. Wieser Brothers, General Contractor Inc." />
       <Content>
         <h1>{pageData.page_title.text}</h1>
         <main>{RichText.render(pageData.page_body.raw)}</main>

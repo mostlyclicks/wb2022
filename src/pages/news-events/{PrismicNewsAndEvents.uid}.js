@@ -17,7 +17,10 @@ const NewsEventsPost = ({data}) => {
 
   return (
     <Layout>
-      <SEO title={article.data.title.text} />
+      <SEO
+        title={article.data.title.text}
+        description={`Keep up on the latest news at Wieser Brothers: ${article.data.title.text}`}
+      />
       <NewsEventWrapper>
         <NewsMain>
           <h1>{article.data.title.text}</h1>

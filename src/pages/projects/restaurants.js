@@ -16,7 +16,10 @@ const index = ({data}) => {
 
   return (
     <Layout>
-      <SEO title="Projects: Restaurants" />
+      <SEO
+        title="Projects: Restaurants"
+        description="See Wieser Brothers Restaurant projects. Contact us at 507.895.8903 for more information."
+      />
       <ProjectWrapper>
         <L2MainImage>
           <L2Title>

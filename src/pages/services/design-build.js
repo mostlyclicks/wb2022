@@ -11,7 +11,10 @@ const DesignBuild = ({data}) => {
 
   return (
     <>
-      <SEO title={`Services - ${pageData.page_title.text}`} />
+      <SEO
+        title={`Services - ${pageData.page_title.text}`}
+        description="Learn about design/build services at Wieser Brothers, General Contractor. Contact us at 507.895.8903 for more information."
+      />
       <L2PagesLayout
         title={`Design/Build`}
         subnav={`services`}

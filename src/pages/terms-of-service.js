@@ -7,7 +7,7 @@ import styled from "styled-components";
 const TermsOfService = () => {
   return (
     <Layout>
-      <SEO title="Terms of Service" />
+      <SEO title="Terms of Service" description="Read our Terms of Service - Wieser Brothers, General Contractor Inc. of La Crescent MN." />
       <Content>
         <h2>Terms of Service</h2>
         <p>

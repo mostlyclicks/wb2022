@@ -10,15 +10,18 @@ const pageData = data.allPrismicOurFirm.edges[0].node.data
 
 return (
   <>
-    <SEO title="Our Firm" />
-    <L2PagesLayout 
-      title = {`Our Firm`}
-      subnav = {`firm`}
-      backgroundImage = {bgImage}
-      content = {pageData.page_body.raw}      
+    <SEO
+      title="Our Firm"
+      description="Learn about Wieser Brothers, our team and our services. Contact us at 507.895.8903 for more information."
+    />
+    <L2PagesLayout
+      title={`Our Firm`}
+      subnav={`firm`}
+      backgroundImage={bgImage}
+      content={pageData.page_body.raw}
     />
   </>
-)
+);
 }
 
 export const query = graphql`

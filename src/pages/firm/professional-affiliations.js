@@ -10,7 +10,10 @@ const ProfessionalAffiliations = ({data}) => {
   
   return (
     <>
-      <SEO title="Professional Affiliations" />
+      <SEO
+        title="Professional Affiliations"
+        description="See all of our partners and professional affiliations. Contact us at 507.895.8903 for more information."
+      />
       <L2PagesLayout
         title={`Professional Affiliations`}
         subnav={`firm`}

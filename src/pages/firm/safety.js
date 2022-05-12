@@ -10,17 +10,19 @@ const Safety = ({data}) => {
   const pageData = data.allPrismicSafety.edges[0].node.data
   
   return (
-  <>
-    <SEO title="Safey" />
-    <L2PagesLayout 
-      title={`Safety`}
-      subnav={`firm`}
-      backgroundImage = {bgImage}
-      content = {pageData.page_body.raw}
-    />
-  </>
-  
-)
+    <>
+      <SEO
+        title="Safey"
+        description="Learn about safety iniatives at Wieser Brothers. Contact us at 507.895.8903 for more information."
+      />
+      <L2PagesLayout
+        title={`Safety`}
+        subnav={`firm`}
+        backgroundImage={bgImage}
+        content={pageData.page_body.raw}
+      />
+    </>
+  );
 }
 
 export const query = graphql`

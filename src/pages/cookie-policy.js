@@ -7,7 +7,7 @@ import styled from "styled-components";
 const CookiePolicy = () => {
   return (
     <Layout>
-      <SEO title="Cookie Policy" />
+      <SEO title="Cookie Policy" description="Read our Cookie Policy. Wieser Brothers, General Contractor Inc." />
       <Content>
         <h2>Cookie Policy</h2>
         <p>

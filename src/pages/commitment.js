@@ -13,7 +13,7 @@ const Commitment = ({data}) => {
 
   return (
     <>
-      <SEO title="Our Commitment" />
+      <SEO title="Our Commitment" description="Read about our core principles: Trust, Partnership, Excellence. Wieser Brothers, General Contractor Inc." />
       <L2PagesLayout
         title={pageData.node.data.page_title.text}
         subnav={`commitment`}

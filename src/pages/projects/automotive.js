@@ -16,7 +16,10 @@ const index = ({data}) => {
 
   return (
     <Layout>
-    <SEO title="Projects: Automotive" />
+      <SEO
+        title="Projects: Automotive"
+        description="See Wieser Brothers Automotive projects. Contact us at 507.895.8903 for more information."
+      />
       <ProjectWrapper>
         <L2MainImage>
           <L2Title>

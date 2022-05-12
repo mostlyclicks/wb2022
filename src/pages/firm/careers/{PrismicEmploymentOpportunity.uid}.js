@@ -22,7 +22,10 @@ const EmploymentOpportunity = ({ data }) => {
 
   return (
     <>
-      <SEO title={`Careers: ${job.data.title.text}`} />
+      <SEO
+        title={`Careers: ${job.data.title.text}`}
+        description={`Wieser Brothers current open positions. Apply now: ${job.data.title.text}`}
+      />
       <L2PagesLayout
         title={`Careers`}
         backgroundImage={bgImage}
