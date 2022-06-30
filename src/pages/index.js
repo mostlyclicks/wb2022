@@ -4,6 +4,7 @@ import Layout from '../components/Layout/Layout'
 import SEO from '../components/seo'
 import HeroSection from '../components/Home/hero-section'
 import HomeGrid from "../components/Home/grid-container";
+import Mission from "../components/Home/mission"
 import HeroBG from "../images/hero_8918-bg3.jpg";
 
 const Index = () => {
@@ -16,6 +17,7 @@ const Index = () => {
       <MainSection>
         <HomeGrid />
       </MainSection>
+      <Mission />
     </Layout>
   );
 }

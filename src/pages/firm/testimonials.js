@@ -15,11 +15,14 @@ const Testimonials = ( {data} ) => {
   
   return (
     <Layout>
-      <SEO title="Testimonials" />
+      <SEO
+        title="Testimonials"
+        description="Read testimonials from our clients. Contact us at 507.895.8903 for more information."
+      />
       <h1>Testimonials</h1>
-      
+
       <ul>
-        {testimonialList.map(quote => {
+        {testimonialList.map((quote) => {
           return (
             <li>
               <Link to={`/firm/testimonials/${quote.node.uid}`}>
@@ -28,11 +31,11 @@ const Testimonials = ( {data} ) => {
               </Link>
               {RichText.asText(quote.node.testimonial_text)}
             </li>
-          )
+          );
         })}
       </ul>
     </Layout>
-  )
+  );
 }
 
 export default Testimonials
