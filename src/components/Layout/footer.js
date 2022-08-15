@@ -94,6 +94,15 @@ const Footer = () => {
               <li>
                 <Link to="/cookie-policy">Cookie Policy</Link>
               </li>
+              <li>
+                <a
+                  href="https://www.allegiancecosttransparency.com/2022-07-01_WIESER_BROTHERS_GENERAL_CONTRACTOR_INC_index.json"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  TiC (JSON)
+                </a>
+              </li>
             </ul>
           </div>
 
