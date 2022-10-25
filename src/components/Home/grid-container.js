@@ -12,7 +12,17 @@ const HomeGrid = () => {
   return (
     <GridSection>
       <GridContainer>
-        <GridItem></GridItem>
+        <GridItem>
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/NqHs89ekmbw"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </GridItem>
         <GridItem>
           <GridBox>
             <h1>
@@ -28,7 +38,7 @@ const HomeGrid = () => {
         <GridItem>
           <GridBox>
             <h1>Projects</h1>
-            
+
             <Link to="/projects">View projects</Link>
           </GridBox>
         </GridItem>
@@ -37,14 +47,14 @@ const HomeGrid = () => {
         <GridItem>
           <GridBox>
             <h1>Careers</h1>
-            <h3>Constructing your career path?  Join Wieser Brothers Crew</h3>
+            <h3>Constructing your career path? Join Wieser Brothers Crew</h3>
             <p>See all of our job opportunities</p>
             <Link to="/firm/careers">Start here</Link>
           </GridBox>
         </GridItem>
       </GridContainer>
     </GridSection>
-  )
+  );
 }
 
 export default HomeGrid
@@ -92,20 +102,25 @@ const GridItem = styled.div`
   display: block;
   padding: 20px;
   background-color: rgba(255, 255, 255, 1);
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+  // box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
   color: var(--orange);
   :nth-child(1) {
     order: 1;
-    background-image: url(${block2});
-    background-size:cover;
-    background-position-x:center;
-    background-repeat:no-repeat;
+    display: flex;
+    // background-image: url(${block2});
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    iframe {
+      align-self: center;
+    }
   }
   :nth-child(2) {
     order: 2;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items:center;
     justify-content: center;
     background-color: var(--darkGray);
   }
@@ -120,14 +135,13 @@ const GridItem = styled.div`
   :nth-child(4) {
     order: 3;
     background-image: url(${block3});
-    background-size:cover;
+    background-size: cover;
   }
   :nth-child(5) {
     order: 5;
     background-image: url(${block4});
-    background-size:cover;
+    background-size: cover;
   }
-
 
   :nth-child(6) {
     order: 6;
@@ -142,26 +156,36 @@ const GridItem = styled.div`
     height: 300px;
     :nth-child(1) {
       order: 1;
-      background-position-x:-50px;
+      background-position-x: -50px;
     }
-    :nth-child(2) {order: 2;}
-    :nth-child(3) {order: 3;}
-    :nth-child(4) {order: 4;}
-    :nth-child(5) {order: 5;}
-    :nth-child(6) {order: 6;}
+    :nth-child(2) {
+      order: 2;
+    }
+    :nth-child(3) {
+      order: 3;
+    }
+    :nth-child(4) {
+      order: 4;
+    }
+    :nth-child(5) {
+      order: 5;
+    }
+    :nth-child(6) {
+      order: 6;
+    }
   }
 
   @media ${device.laptop} {
-    height:400px;
-    
+    height: 400px;
   }
   @media ${device.laptopL} {
     :nth-child(1) {
-      background-position-x:-50px;
+      background-position-x: -50px;
     }
   }
-`
+`;
 const GridBox = styled.div`
+  
   width: 250px;
   height: 250px;
   // overflow: hidden;
