@@ -28,7 +28,9 @@ export default index
 
 export const JobData = graphql`
   query {
-    allPrismicEmploymentOpportunity {
+    allPrismicEmploymentOpportunity(
+      sort: { order: ASC, fields: data___title___text }
+    ) {
       edges {
         node {
           id
@@ -42,4 +44,4 @@ export const JobData = graphql`
       }
     }
   }
-`
+`;

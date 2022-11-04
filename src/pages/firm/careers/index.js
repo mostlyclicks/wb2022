@@ -47,7 +47,7 @@ const Careers = ( {data} ) => {
                title="Wieser Brothers Job Application   Fillable Form 12 21 19"
                class="btn btn-primary"
              >
-               Click here to Apply
+               <StyledButton>Click here to Apply</StyledButton>
              </a>
            </p>
            <p>
@@ -115,7 +115,9 @@ export default Careers
 
 export const query = graphql`
   query CareersQuery {
-    allPrismicEmploymentOpportunity {
+    allPrismicEmploymentOpportunity(
+      sort: { order: ASC, fields: data___title___text }
+    ) {
       nodes {
         data {
           job_description {
@@ -270,7 +272,22 @@ const L2Navigation = styled.aside`
       text-decoration: none;
     }
   }
-`
 
+  
+`
+const StyledButton = styled.button`
+  background-color: var(--wbGreenDark);
+  padding: 1em 2em;
+  border: none;
+  color: white;
+  margin: 1em 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius:5px;
+  &:hover  {
+    filter: brightness(150%);
+    
+  }
+`;
 
 
