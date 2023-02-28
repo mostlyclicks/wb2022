@@ -23,9 +23,6 @@ const TopNav = () => {
       
       <ul className="flex justify-center md:justify-end flex-wrap gap-6 ">
         <li className="hidden md:block">
-          <a href="#" onClick={showPopup}>COVID-19 UPDATE</a>
-        </li>
-        <li className="hidden md:block">
           <Link to="/firm/careers">Careers</Link>
         </li>
         <li>
