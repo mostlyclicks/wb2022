@@ -13,7 +13,7 @@ const Mission = () => {
             <p>
               Deliver an exceptional construction experience built on integrity,
               partnership, and excellence, while caring for our employees,
-              communities, and environment.
+              communities and environment.
             </p>
           </TextBox>
           <TextBox>
